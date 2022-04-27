@@ -5,8 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpDotNetProject"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="KlonningsAttest" Height="450" Width="800">
     <Grid>
+        <Button x:Name="clickMe" Content="Button" HorizontalAlignment="Left" Margin="264,158,0,0" VerticalAlignment="Top" Height="108" Width="204" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
 
     </Grid>
 </Window>

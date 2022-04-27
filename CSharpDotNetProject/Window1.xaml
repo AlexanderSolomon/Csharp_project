@@ -1,0 +1,99 @@
+﻿<Window x:Class="CSharpDotNetProject.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpDotNetProject"
+        mc:Ignorable="d"
+        Title="Window1" Height="450" Width="800">
+    <ScrollViewer>
+    <StackPanel>
+        <Label>Dekra Bilsyn:</Label>
+            <TextBox>write here:</TextBox>
+            <Label>Rapport udført af:</Label>
+            <TextBox></TextBox>
+            <Label>Dato:</Label>
+            <TextBox></TextBox>
+        <Label>Registreringsnummer:</Label>
+            <TextBox></TextBox>
+        <Label>Stelnummer:</Label>
+            <TextBox></TextBox>
+        <Label>Mærke</Label>
+            <TextBox></TextBox>
+        <Label>Model:</Label>
+            <TextBox></TextBox>
+        <Label>Version:</Label>
+            <TextBox></TextBox>
+            <Label>KM-Stand:</Label>
+            <TextBox></TextBox>
+            <Label>Første registrering:</Label>
+            <TextBox></TextBox>
+            <Label>Billed af bil</Label>
+        <TextBox>write here:</TextBox>
+        <Label>Fremstiller</Label>
+            <TextBox></TextBox>
+            <Label>Kontaktperson</Label>
+            <TextBox></TextBox>
+            <Label>Er stelnummer korrekt?</Label>
+            <TextBox>lav mig til ja nej tick box</TextBox>
+            <Label>Stelnummer tilstand</Label>
+            <TextBox></TextBox>
+            <Label>Beskadiget/manglende stelnummer er oplyst til at være</Label>
+            <TextBox></TextBox>
+            <Label>Registreings attest</Label>
+            <TextBox></TextBox>
+            <Label>Registerings attest original/kopi</Label>
+            <TextBox></TextBox>
+            <Label>Seneste kendte registreringsnummer:</Label>
+            <TextBox></TextBox>
+            <Label>E-typegodkendt under nr.</Label>
+            <TextBox></TextBox>
+            <Label>Identitet Dokumenteret med brochure:</Label>
+            <TextBox> ja nej tick box</TextBox>
+            <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium:</Label>
+            <TextBox>ja nej tick</TextBox>
+            <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring</Label>
+            <TextBox>ja nej tick</TextBox>
+            <Label>Billeder af dokumenter vedhæftet </Label>
+            <TextBox>ja nej tick</TextBox>
+            <Label>Køretøj i original farve</Label>
+            <TextBox></TextBox>
+            <Label>Lak konklusion</Label>
+            <TextBox></TextBox>
+            <Label>Motornummer kontrolleret</Label>
+            <TextBox></TextBox>
+            <Label>Antal nøgler</Label>
+            <TextBox></TextBox>
+            <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
+            <TextBox></TextBox>
+            <Label>Identitet dokumenteret med orginalt CoC dokument/data-erklæring</Label>
+            <TextBox></TextBox>
+            <Label>Original laktykkelse</Label>
+            <TextBox></TextBox>
+            <Label>Laktykkelse målt til</Label>
+            <TextBox></TextBox>
+            <Label>Gearkassenummer</Label>
+            <TextBox></TextBox>
+            <Label>Gearkassenummer kontrolleret</Label>
+            <TextBox></TextBox>
+            <Label>Medbragt servicehistorik kontrolleret</Label>
+            <TextBox></TextBox>
+            <Label>Andet</Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+            <Label></Label>
+            <TextBox></TextBox>
+        </StackPanel>
+    </ScrollViewer>
+</Window>
