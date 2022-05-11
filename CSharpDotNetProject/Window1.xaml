@@ -9,7 +9,7 @@
     <ScrollViewer>
     <StackPanel>
         <Label>Dekra Bilsyn:</Label>
-            <TextBox>write here:</TextBox>
+            <TextBox TextChanged="TextBox_TextChanged">write here:</TextBox>
             <Label>Rapport udført af:</Label>
             <TextBox></TextBox>
             <Label>Dato:</Label>

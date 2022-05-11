@@ -6,9 +6,10 @@
         xmlns:local="clr-namespace:CSharpDotNetProject"
         mc:Ignorable="d"
         Title="datagrid" Height="450" Width="800">
-    <Grid>
+    <Grid x:Name="text2">
         <DataGrid Margin="0,24,0,27" Name="dtGrid" ItemsSource="{Binding}"/>
-        <TextBox HorizontalAlignment="Left" Margin="234,180,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="166" Height="14"/>
-        <TextBox HorizontalAlignment="Left" Margin="300,243,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="save_button" Content="Save" HorizontalAlignment="Left" Margin="375,266,0,0" VerticalAlignment="Top" Height="60" Width="93" Click="save_button_Click"/>
+        <TextBox x:Name="Text1" HorizontalAlignment="Left" Margin="328,196,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="Text2" HorizontalAlignment="Left" Margin="328,231,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
     </Grid>
 </Window>
