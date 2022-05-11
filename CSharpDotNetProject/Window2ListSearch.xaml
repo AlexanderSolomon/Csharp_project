@@ -7,6 +7,8 @@
         mc:Ignorable="d"
         Title="Window2ListSearch" Height="450" Width="800">
     <Grid>
-        
+        <TextBox Name="searchBox" HorizontalAlignment="Left" Margin="0,85,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="194" Height="30" KeyUp="searchBox_KeyUp"/>
+        <DataGrid Name="certificateDGrid" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="0,115,0,0"/>
+
     </Grid>
 </Window>
