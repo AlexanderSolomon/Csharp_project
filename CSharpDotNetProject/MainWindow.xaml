@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="KlonningsAttest" Height="450" Width="800">
     <Grid>
-        <Button x:Name="clickMe" Content="Button" HorizontalAlignment="Left" Margin="264,158,0,0" VerticalAlignment="Top" Height="108" Width="204" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
+        <Button x:Name="clickMe" Content="Ny Attest" HorizontalAlignment="Left" Margin="267,260,0,0" VerticalAlignment="Top" Height="108" Width="204" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -16,6 +16,7 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
+        <Button Content="SearchList" HorizontalAlignment="Left" Margin="293,123,0,0" VerticalAlignment="Top" Height="94" Width="152" Click="Openwindow2ListSearch"/>
 
     </Grid>
 </Window>

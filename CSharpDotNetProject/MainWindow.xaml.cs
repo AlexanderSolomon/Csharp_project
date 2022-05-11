@@ -34,5 +34,11 @@ namespace CSharpDotNetProject
             this.Close();
 
         }
+        private void Openwindow2ListSearch(object sender, RoutedEventArgs e)
+        {
+            Window2ListSearch sW=new Window2ListSearch();
+            sW.Show();
+            this.Close();
+        }
     }
 }

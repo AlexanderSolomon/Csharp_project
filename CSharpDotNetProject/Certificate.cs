@@ -9,7 +9,6 @@ namespace CSharpDotNetProject
     internal class Certificate
     {
         private int id;
-        private 
 
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
