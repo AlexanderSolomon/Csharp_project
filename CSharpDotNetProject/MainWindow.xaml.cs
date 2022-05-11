@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace CSharpDotNetProject
 {
     /// <summary>
@@ -24,6 +23,7 @@ namespace CSharpDotNetProject
         {
             InitializeComponent();
             clickMe.FontSize = 50;
+         
         }
 
       
@@ -36,7 +36,7 @@ namespace CSharpDotNetProject
         }
         private void Openwindow2ListSearch(object sender, RoutedEventArgs e)
         {
-            Window2ListSearch sW=new Window2ListSearch();
+            datagrid sW = new datagrid();
             sW.Show();
             this.Close();
         }
