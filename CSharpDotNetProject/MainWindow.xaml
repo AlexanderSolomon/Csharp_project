@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpDotNetProject"
         mc:Ignorable="d"
-        Title="KlonningsAttest" Height="450" Width="800">
+        Title="KlonningsAttest" Height="800" Width="1200">
     <Grid>
         <Button x:Name="clickMe" Content="Ny Attest" HorizontalAlignment="Left" Margin="267,260,0,0" VerticalAlignment="Top" Height="108" Width="204" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
             <Button.RenderTransform>
