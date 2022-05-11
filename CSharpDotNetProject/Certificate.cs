@@ -26,6 +26,9 @@ namespace CSharpDotNetProject
         private Boolean serviceHistoryVerified;
         private Boolean keyControlled;
         private string originalPaintThickness; 
+        private string originalPaintThicknessMeasured;
+        private string paintConclusion;
+        private Boolean engineNumberVerified; 
 
 
 
