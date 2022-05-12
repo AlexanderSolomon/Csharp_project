@@ -23,11 +23,12 @@ public partial class datagrid : Window
 
     }
 
-    private void save_button_Click(object sender, RoutedEventArgs e)
+    public void save_button_Click(object sender, RoutedEventArgs e)
     {
         MySqlConnection connection = new MySqlConnection(connectionstring);
         connection.Open();
-        string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`) VALUES(" + Text1.Text + ",'" + Text2.Text + "')";
+        string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`) " +
+            "VALUES(" + Text1.Text + ",'" + Text2.Text + "')";
         MySqlCommand cmd = new MySqlCommand(query, connection);
         int value = cmd.ExecuteNonQuery();
         MessageBox.Show(value.ToString());

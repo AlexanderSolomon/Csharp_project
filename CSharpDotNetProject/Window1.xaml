@@ -8,76 +8,111 @@
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
     <StackPanel>
-        <Label>Dekra Bilsyn:</Label>
-            <TextBox TextChanged="TextBox_TextChanged">write here:</TextBox>
+            <Label>Dekra Bilsyn:</Label>
+            <TextBox Name="dekra_bilsyn"/>
+        
             <Label>Rapport udført af:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="rapport_udført_af" />
+        
             <Label>Dato:</Label>
-            <TextBox></TextBox>
-        <Label>Registreringsnummer:</Label>
-            <TextBox></TextBox>
-        <Label>Stelnummer:</Label>
-            <TextBox></TextBox>
-        <Label>Mærke</Label>
-            <TextBox></TextBox>
-        <Label>Model:</Label>
-            <TextBox></TextBox>
-        <Label>Version:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="dato"/>
+        
+            <Label>Registreringsnummer:</Label>
+            <TextBox Name="registreringsnummer"/>
+        
+            <Label>Stelnummer:</Label>
+            <TextBox Name="stelnummer"/>
+        
+            <Label>Mærke</Label>
+            <TextBox Name="mærke"/>
+        
+            <Label>Model:</Label>
+            <TextBox Name="model"/>
+        
+            <Label>Version:</Label>
+            <TextBox Name="version"/>
+        
             <Label>KM-Stand:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="km_stand"/>
+        
             <Label>Første registrering:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="første_registrering"></TextBox>
+        
             <Label>Billed af bil</Label>
-        <TextBox>write here:</TextBox>
-        <Label>Fremstiller</Label>
-            <TextBox></TextBox>
+            <TextBox>write here:</TextBox>
+        
+            <Label>Fremstiller</Label>
+            <TextBox Name="fremstiller"></TextBox>
+        
             <Label>Kontaktperson</Label>
-            <TextBox></TextBox>
+            <TextBox Name="kontaktperson"></TextBox>
+        
             <Label>Er stelnummer korrekt?</Label>
-            <TextBox>lav mig til ja nej tick box</TextBox>
-            <Label>Stelnummer tilstand</Label>
-            <TextBox></TextBox>
+            <TextBox Name="stelnummer_korrekt">lav mig til ja nej tick box</TextBox>
+        
+            <Label >Stelnummer tilstand</Label>
+            <TextBox Name="stelnummer_tilstand"/>
+        
             <Label>Beskadiget/manglende stelnummer er oplyst til at være</Label>
             <TextBox></TextBox>
+        
             <Label>Registreings attest</Label>
             <TextBox></TextBox>
+        
             <Label>Registerings attest original/kopi</Label>
             <TextBox></TextBox>
+        
             <Label>Seneste kendte registreringsnummer:</Label>
             <TextBox></TextBox>
+        
             <Label>E-typegodkendt under nr.</Label>
             <TextBox></TextBox>
+        
             <Label>Identitet Dokumenteret med brochure:</Label>
             <TextBox> ja nej tick box</TextBox>
+        
             <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium:</Label>
             <TextBox>ja nej tick</TextBox>
+        
             <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring</Label>
             <TextBox>ja nej tick</TextBox>
+        
             <Label>Billeder af dokumenter vedhæftet </Label>
             <TextBox>ja nej tick</TextBox>
+        
             <Label>Køretøj i original farve</Label>
             <TextBox></TextBox>
+        
             <Label>Lak konklusion</Label>
             <TextBox></TextBox>
+        
             <Label>Motornummer kontrolleret</Label>
             <TextBox></TextBox>
+        
             <Label>Antal nøgler</Label>
-            <TextBox></TextBox>
+            <TextBox Name="antal_nøgler"></TextBox>
+        
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
             <TextBox></TextBox>
+        
             <Label>Identitet dokumenteret med orginalt CoC dokument/data-erklæring</Label>
             <TextBox></TextBox>
+        
             <Label>Original laktykkelse</Label>
             <TextBox></TextBox>
+        
             <Label>Laktykkelse målt til</Label>
             <TextBox></TextBox>
+        
             <Label>Gearkassenummer</Label>
-            <TextBox></TextBox>
+            <TextBox Name="gearkassenummer"></TextBox>
+        
             <Label>Gearkassenummer kontrolleret</Label>
             <TextBox></TextBox>
+        
             <Label>Medbragt servicehistorik kontrolleret</Label>
             <TextBox></TextBox>
+        
             <Label>Andet</Label>
             <TextBox></TextBox>
             <Label></Label>
@@ -94,6 +129,7 @@
             <TextBox></TextBox>
             <Label></Label>
             <TextBox></TextBox>
+            <Button Content="Save" Name="save_button" Click="save_button_Click"/>
         </StackPanel>
     </ScrollViewer>
 </Window>
