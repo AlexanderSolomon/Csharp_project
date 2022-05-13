@@ -22,14 +22,14 @@ namespace CSharpDotNetProject
         public MainWindow()
         {
             InitializeComponent();
-            clickMe.FontSize = 50;
+           // clickMe.FontSize = 50;
          
         }
 
       
         private void Openwindow1(object sender, RoutedEventArgs e)
         {
-            Window1 sW=new Window1();
+            Window2 sW=new Window2();
             sW.Show();
             this.Close();
 
@@ -39,6 +39,22 @@ namespace CSharpDotNetProject
             datagrid sW = new datagrid();
             sW.Show();
             this.Close();
+        }
+
+        private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ClickCount== 2)
+            {
+                this.WindowState = WindowState.Normal;
+            }
+        }
+
+        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
         }
     }
 }
