@@ -29,7 +29,7 @@ namespace CSharpDotNetProject
       
         private void Openwindow1(object sender, RoutedEventArgs e)
         {
-            Window2 sW=new Window2();
+            Window1 sW=new Window1();
             sW.Show();
             this.Close();
 
