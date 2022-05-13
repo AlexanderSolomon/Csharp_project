@@ -8,92 +8,113 @@
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
     <StackPanel>
-        <Label>Dekra Bilsyn:</Label>
-            <TextBox>write here:</TextBox>
+            <Label>Dekra Bilsyn:</Label>
+            <TextBox Name="dekra_bilsyn"/>
+        
             <Label>Rapport udført af:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="rapport_udført_af" />
+        
             <Label>Dato:</Label>
-            <TextBox></TextBox>
-        <Label>Registreringsnummer:</Label>
-            <TextBox></TextBox>
-        <Label>Stelnummer:</Label>
-            <TextBox></TextBox>
-        <Label>Mærke</Label>
-            <TextBox></TextBox>
-        <Label>Model:</Label>
-            <TextBox></TextBox>
-        <Label>Version:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="dato"/>
+        
+            <Label>Registreringsnummer:</Label>
+            <TextBox Name="registreringsnummer"/>
+        
+            <Label>Stelnummer:</Label>
+            <TextBox Name="stelnummer"/>
+        
+            <Label>Mærke</Label>
+            <TextBox Name="mærke"/>
+        
+            <Label>Model:</Label>
+            <TextBox Name="model"/>
+        
+            <Label>Version:</Label>
+            <TextBox Name="version"/>
+        
             <Label>KM-Stand:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="km_stand"/>
+        
             <Label>Første registrering:</Label>
-            <TextBox></TextBox>
-            <Label>Billed af bil</Label>
-        <TextBox>write here:</TextBox>
-        <Label>Fremstiller</Label>
-            <TextBox></TextBox>
+            <TextBox Name="første_registrering"/>
+
+
+            <Label>Fremstiller</Label>
+            <TextBox Name="fremstiller"/>
+
             <Label>Kontaktperson</Label>
-            <TextBox></TextBox>
-            <Label>Er stelnummer korrekt?</Label>
-            <TextBox>lav mig til ja nej tick box</TextBox>
-            <Label>Stelnummer tilstand</Label>
-            <TextBox></TextBox>
+            <TextBox Name="kontaktperson"/>
+
+            <Label>Er stelnummer korrekt?: ja eller nej</Label>
+            <TextBox Name="stelnummer_korrekt"/> 
+
+            <Label >Stelnummer tilstand</Label>
+            <TextBox Name="stelnummer_tilstand"/>
+        
             <Label>Beskadiget/manglende stelnummer er oplyst til at være</Label>
-            <TextBox></TextBox>
-            <Label>Registreings attest</Label>
-            <TextBox></TextBox>
+            <TextBox Name="beskadigt_stelnummer"/>
+
+            <Label>Registrerings attest</Label>
+            <TextBox Name="Registreringsattest"/>
+
             <Label>Registerings attest original/kopi</Label>
-            <TextBox></TextBox>
+            <TextBox Name="registreringsattest_original"/>
+
             <Label>Seneste kendte registreringsnummer:</Label>
-            <TextBox></TextBox>
+            <TextBox Name="seneste_kendte_registreringsnummer"/>
+
             <Label>E-typegodkendt under nr.</Label>
-            <TextBox></TextBox>
-            <Label>Identitet Dokumenteret med brochure:</Label>
-            <TextBox> ja nej tick box</TextBox>
-            <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium:</Label>
-            <TextBox>ja nej tick</TextBox>
-            <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring</Label>
-            <TextBox>ja nej tick</TextBox>
-            <Label>Billeder af dokumenter vedhæftet </Label>
-            <TextBox>ja nej tick</TextBox>
+            <TextBox Name="E_typegodkendt"/>
+
+            <Label>Identitet Dokumenteret med brochure: ja eller nej</Label>
+            <TextBox Name="identitet_dokumenteret_med_brochure"/>
+
+            <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium: ja eller nej</Label>
+            <TextBox Name="identitet_dokumenteret_med_erklæring_fra_et_prøvelaboratorium"/>
+
+            <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring: ja eller nej</Label>
+            <TextBox Name="identitet_dokumenteret_med_originalt_data_erklæring"/>
+
+            <Label>Billeder af dokumenter vedhæftet: ja eller nej </Label>
+            <TextBox Name="billeder_af_dokumenter_vedhæftet"/>
+
             <Label>Køretøj i original farve</Label>
-            <TextBox></TextBox>
+            <TextBox Name="køretøj_i_original_farve"/>
+
             <Label>Lak konklusion</Label>
-            <TextBox></TextBox>
+            <TextBox Name="lak_konklusion"/>
+
             <Label>Motornummer kontrolleret</Label>
-            <TextBox></TextBox>
+            <TextBox Name="motornummer_kontrolleret"/>
+
             <Label>Antal nøgler</Label>
-            <TextBox></TextBox>
+            <TextBox Name="antal_nøgler"/>
+
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
-            <TextBox></TextBox>
-            <Label>Identitet dokumenteret med orginalt CoC dokument/data-erklæring</Label>
-            <TextBox></TextBox>
+            <TextBox Name="nøgler_kontrolleret"/>
+
+
             <Label>Original laktykkelse</Label>
-            <TextBox></TextBox>
+            <TextBox Name="original_laktykkelse"/>
+
             <Label>Laktykkelse målt til</Label>
-            <TextBox></TextBox>
+            <TextBox Name="laktykkelse_målt_til"/>
+
             <Label>Gearkassenummer</Label>
-            <TextBox></TextBox>
+            <TextBox Name="gearkassenummer"/>
+
             <Label>Gearkassenummer kontrolleret</Label>
-            <TextBox></TextBox>
+            <TextBox Name="gearkassenummer_kontrolleret"/>
+
             <Label>Medbragt servicehistorik kontrolleret</Label>
-            <TextBox></TextBox>
-            <Label>Andet</Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
-            <Label></Label>
-            <TextBox></TextBox>
+            <TextBox Name="medbragt_servicehistorik"/>
+
+            <Label>Identitet dokumenteret med Originalt CoC_dokument data erklæring</Label>
+            <TextBox Name="identitet_dokumenteret_med_coc_dokument"/>
+
+            <Label>Billed af bil</Label>
+            <TextBox>write here:</TextBox>
+            <Button Content="Save" Name="save_button" Click="save_button_Click"/>
         </StackPanel>
     </ScrollViewer>
 </Window>
