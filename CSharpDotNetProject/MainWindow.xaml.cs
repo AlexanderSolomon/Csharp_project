@@ -56,5 +56,13 @@ namespace CSharpDotNetProject
                 this.DragMove();
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 sW = new Window1();
+            sW.Show();
+            this.Close();
+
+        }
     }
 }
