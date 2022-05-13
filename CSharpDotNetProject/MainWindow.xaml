@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="KlonningsAttest" Height="800" Width="1200">
     <Grid>
-        <Button x:Name="clickMe" Content="Ny Attest" HorizontalAlignment="Left" Margin="267,260,0,0" VerticalAlignment="Top" Height="108" Width="204" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
+        <Button x:Name="clickMe" Content="Ny Attest" HorizontalAlignment="Left" Margin="42,171,0,0" VerticalAlignment="Top" Height="43" Width="152" RenderTransformOrigin="0.5,0.5" Click="Openwindow1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -16,7 +16,9 @@
                 </TransformGroup>
             </Button.RenderTransform>
         </Button>
-        <Button Content="SearchList" HorizontalAlignment="Left" Margin="293,123,0,0" VerticalAlignment="Top" Height="94" Width="152" Click="Openwindow2ListSearch"/>
+        <Button Content="SearchList" HorizontalAlignment="Left" Margin="42,98,0,0" VerticalAlignment="Top" Height="43" Width="152" Click="Openwindow2ListSearch"/>
+        <TextBlock HorizontalAlignment="Left" Margin="277,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Text="Welcome to DEKRA"/><Run Language="en-gb" Text=" here you can create new certificates or clone new ones!"/></TextBlock>
+        <Button Content="ViewPdf" HorizontalAlignment="Left" Margin="98,263,0,0" VerticalAlignment="Top" Click="Button_Click"/>
 
     </Grid>
 </Window>
