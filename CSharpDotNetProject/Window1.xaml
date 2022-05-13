@@ -8,6 +8,9 @@
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
     <StackPanel>
+            <Button Content="Browser" Click="Button_Click"/>
+            <TextBox Name="pictureName"/>
+            <Button Content="Accept" Click="Button_Click_save_picture"/>
             <Label>Dekra Bilsyn:</Label>
             <TextBox Name="dekra_bilsyn"/>
         
@@ -115,6 +118,7 @@
             <Label>Billed af bil</Label>
             <TextBox>write here:</TextBox>
             <Button Content="Save" Name="save_button" Click="save_button_Click"/>
+            
         </StackPanel>
     </ScrollViewer>
 </Window>
