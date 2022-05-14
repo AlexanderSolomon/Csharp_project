@@ -36,9 +36,9 @@ namespace CSharpDotNetProject
         }
         private void Openwindow2ListSearch(object sender, RoutedEventArgs e)
         {
-            datagrid sW = new datagrid();
+            WindowSigniture sW = new WindowSigniture();
             sW.Show();
-            this.Close();
+   
         }
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
