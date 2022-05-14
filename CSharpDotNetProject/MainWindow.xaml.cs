@@ -29,7 +29,7 @@ namespace CSharpDotNetProject
       
         private void Openwindow1(object sender, RoutedEventArgs e)
         {
-            Window1 sW=new Window1();
+            Window1 sW = new Window1();
             sW.Show();
             this.Close(); 
 
@@ -38,7 +38,7 @@ namespace CSharpDotNetProject
         {
             Window2ListSearch sW = new Window2ListSearch();
             sW.Show();
-            this.Close();
+   
         }
 
         private void Border_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)

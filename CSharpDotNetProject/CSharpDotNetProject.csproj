@@ -17,6 +17,7 @@
     <PackageReference Include="MySqlConnector" Version="2.1.8" />
     <PackageReference Include="Spire.PDF" Version="8.5.0" />
     <PackageReference Include="Syncfusion.Pdf.Wpf" Version="20.1.0.52" />
+    <PackageReference Include="Syncfusion.SfImageEditor.WPF" Version="20.1.0.55" />
   </ItemGroup>
 
   <ItemGroup>
