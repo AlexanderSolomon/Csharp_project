@@ -35,19 +35,20 @@ namespace CSharpDotNetProject
             connection.Open();
             MySqlDataReader dt; 
             dt = cmd.ExecuteReader();
-            connection.Close();
             if (dt.HasRows)
             {
                 while (dt.Read())
                 {
-
+                    elements.Add(new CertificateElement((int)dt["Attest_ID"], dt["Registreringsnummer"].ToString(), dt["Dato"].ToString())); 
                 }
             }
             connection.Close();
+            certificateDGrid.ItemsSource = elements;
+
         }
         private void searchBox_KeyUp(object sender, System.Windows.Input.KeyboardEventArgs e)
         {
-            ///List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.serialNumber.StartsWith(searchBox.Text)));
+            List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.registration.StartsWith(searchBox.Text)));
             certificateDGrid.ItemsSource = filtered;
         }
 
@@ -60,9 +61,16 @@ namespace CSharpDotNetProject
     }
     public class CertificateElement
     {
-        public int id{ get; set; }
-        public string workShop{ get; set; } 
-        public DateTime date { get; set; }
+        public int id { get; set; }
+        public string registration { get; set; }
+        public string date { get; set; }
+
+        public CertificateElement(int id, string registration, string date)
+        {
+            this.id = id;
+            this.registration = registration;
+            this.date = date;
+        }
     }
     // create database connection to get current list. 
 }
