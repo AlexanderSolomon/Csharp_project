@@ -12,6 +12,10 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using MySql.Data.MySqlClient;
+using Syncfusion.UI.Xaml.ImageEditor;
+using Syncfusion.UI.Xaml.ImageEditor.Enums;
+
+
 namespace CSharpDotNetProject
 {
     /// <summary>
@@ -26,8 +30,14 @@ namespace CSharpDotNetProject
         {
             InitializeComponent();
         }
+      
+        private void OpenwindowSign(object sender, RoutedEventArgs e)
+        {
+            WindowSigniture sW = new WindowSigniture();
+            sW.Show();
+        }
 
-        private void save_button_Click(object sender, RoutedEventArgs e)
+            private void save_button_Click(object sender, RoutedEventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
@@ -54,9 +64,11 @@ namespace CSharpDotNetProject
             MySqlCommand cmd2 = new MySqlCommand(query2,connection); 
             int value = cmd.ExecuteNonQuery();
             int value2 = cmd2.ExecuteNonQuery();
-            
+   
+
             MessageBox.Show("Saved");
             connection.Close();
+
         }
     }
 }
