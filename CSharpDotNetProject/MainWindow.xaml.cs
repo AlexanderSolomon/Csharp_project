@@ -31,7 +31,7 @@ namespace CSharpDotNetProject
         {
             Window1 sW=new Window1();
             sW.Show();
-            this.Close();
+          
 
         }
         private void Openwindow2ListSearch(object sender, RoutedEventArgs e)
