@@ -21,12 +21,11 @@ namespace CSharpDotNetProject
     public partial class CertificateOverview : Window
     {
         string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=Oliven13";
-        public CertificateOverview()
+        public CertificateOverview(string id)
         {
             InitializeComponent();
-            string id = id_received.Text; 
             MySqlConnection connection = new MySqlConnection(connectionstring);
-            MySqlCommand cmd = new MySqlCommand("select * FROM kloningsattest.attest_information where Attest_ID = 1;   ", connection);
+            MySqlCommand cmd = new MySqlCommand("select * FROM kloningsattest.attest_information where Attest_ID = " + id + ";", connection);
             connection.Open();
             MySqlDataReader dt;
             dt = cmd.ExecuteReader();
