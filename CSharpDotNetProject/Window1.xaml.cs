@@ -15,7 +15,10 @@ using MySql.Data.MySqlClient;
 using System.IO;
 using Microsoft.Win32;
 using System.Drawing;
+using System.Windows.Media.Imaging;
+
 namespace CSharpDotNetProject
+
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
@@ -72,7 +75,7 @@ namespace CSharpDotNetProject
 
             if (result == true)
             {
-               pictureName.Text = openFileDialog.FileName;
+                imgPhoto.Source = new BitmapImage(new Uri(openFileDialog.FileName));
                
             }
            
@@ -80,14 +83,12 @@ namespace CSharpDotNetProject
 
         private void Button_Click_save_picture(object sender, RoutedEventArgs e)
         {
-            MemoryStream ms = new MemoryStream();
-            byte[] img = ms.ToArray();
+           
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
-            string query = "INSERT INTO `Billede` VALUES(@img)";
+            string query = "INSERT INTO `Billede` VALUES('"+imgPhoto+"')";
             MySqlCommand cmd = new MySqlCommand(query, connection);
-            cmd.Parameters.Add("@img", MySqlDbType.Blob);
-            cmd.Parameters["@img"].Value = img;
+           
             int value = cmd.ExecuteNonQuery();
             connection.Close();
             MessageBox.Show("Saved");

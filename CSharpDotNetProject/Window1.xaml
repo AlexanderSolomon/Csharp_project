@@ -10,6 +10,8 @@
     <StackPanel>
             <Button Content="Browser" Click="Button_Click"/>
             <TextBox Name="pictureName"/>
+            <Image Margin="12,12,16,71" Name="imgPhoto"
+              Stretch="Fill" Grid.Column="1" />
             <Button Content="Accept" Click="Button_Click_save_picture"/>
             <Label>Dekra Bilsyn:</Label>
             <TextBox Name="dekra_bilsyn"/>
