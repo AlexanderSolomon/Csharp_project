@@ -9,6 +9,8 @@
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
     <StackPanel Width="750">
+           
+           
             <Label>Dekra Bilsyn:</Label>
             <TextBox Name="dekra_bilsyn"/>
         
@@ -120,12 +122,19 @@
 
 
             
+               
+            <StackPanel Orientation="Horizontal">
                 <Label>Signatur</Label>
                 <Button Height="100" Content="sign" Name="signiture" Click="OpenwindowSign"/>
                 <Label>Signatur2</Label>
                 <Button Content="sign" Name="signiture2" Click="OpenwindowSign"/>
-
-        
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label>billed1</Label>
+               <Button />
+                <Label>billed2</Label>
+                
+            </StackPanel>
 
 
         </StackPanel>
