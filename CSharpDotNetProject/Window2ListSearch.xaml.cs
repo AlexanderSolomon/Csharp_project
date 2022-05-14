@@ -58,6 +58,21 @@ namespace CSharpDotNetProject
             sW.Show();
             this.Close();
         }
+        private void Double_Click(object sender, RoutedEventArgs e)
+        {
+            var row = ItemsControl.ContainerFromElement((DataGrid)sender,
+                                        e.OriginalSource as DependencyObject) as DataGridRow;
+            if (row == null) return;
+            else
+            {
+                int index = certificateDGrid.SelectedIndex; 
+                string setInfo = (index + 1).ToString();
+                CertificateOverview sW = new CertificateOverview();
+                sW.id_received.Text = setInfo;
+                sW.Show();
+                this.Close();
+            }
+        }
     }
     public class CertificateElement
     {
