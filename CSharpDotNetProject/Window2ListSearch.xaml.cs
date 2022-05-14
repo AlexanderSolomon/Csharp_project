@@ -48,7 +48,7 @@ namespace CSharpDotNetProject
         private void searchBox_KeyUp(object sender, System.Windows.Input.KeyboardEventArgs e)
         {
             ///List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.serialNumber.StartsWith(searchBox.Text)));
-            certificateDGrid.ItemsSource = filtered;
+            ///certificateDGrid.ItemsSource = filtered;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
