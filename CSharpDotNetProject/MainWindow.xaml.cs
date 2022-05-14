@@ -36,7 +36,7 @@ namespace CSharpDotNetProject
         }
         private void Openwindow2ListSearch(object sender, RoutedEventArgs e)
         {
-            datagrid sW = new datagrid();
+            Window2ListSearch sW = new Window2ListSearch();
             sW.Show();
             this.Close();
         }
@@ -55,6 +55,13 @@ namespace CSharpDotNetProject
             {
                 this.DragMove();
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FillPdf pdf = new FillPdf();
+            pdf.Show();
+            this.Close(); 
         }
     }
 }

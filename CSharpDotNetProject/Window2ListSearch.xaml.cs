@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,6 +13,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using MySql.Data.MySqlClient;
+
 
 namespace CSharpDotNetProject
 {
@@ -19,22 +23,31 @@ namespace CSharpDotNetProject
     /// </summary>
     public partial class Window2ListSearch : Window
     {
-        List<CertificateElement> elements = new List<CertificateElement>();
+        string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=Oliven13";
 
+        List<CertificateElement> elements = new List<CertificateElement>();
         public Window2ListSearch()
         {
             InitializeComponent();
-            for (int i = 0; i < 50; i++)
+
+            MySqlConnection connection = new MySqlConnection(connectionstring);
+            MySqlCommand cmd = new MySqlCommand("select Attest_ID, Registreringsnummer, Dato FROM kloningsattest.attest_information;", connection);
+            connection.Open();
+            MySqlDataReader dt; 
+            dt = cmd.ExecuteReader();
+            connection.Close();
+            if (dt.HasRows)
             {
-                elements.Add(new CertificateElement() { serialNumber = "2520020", workShop = "Din mors auto", date = DateTime.Now });
-                elements.Add(new CertificateElement() { serialNumber = "2552520", workShop = "Dekra", date = DateTime.Now });
-                elements.Add(new CertificateElement() { serialNumber = "2534599", workShop = "Dekra", date = DateTime.Now });
+                while (dt.Read())
+                {
+
+                }
             }
-            certificateDGrid.ItemsSource = elements;
+            connection.Close();
         }
         private void searchBox_KeyUp(object sender, System.Windows.Input.KeyboardEventArgs e)
         {
-            List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.serialNumber.StartsWith(searchBox.Text)));
+            ///List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.serialNumber.StartsWith(searchBox.Text)));
             certificateDGrid.ItemsSource = filtered;
         }
 
@@ -47,7 +60,7 @@ namespace CSharpDotNetProject
     }
     public class CertificateElement
     {
-        public string serialNumber{ get; set; }
+        public int id{ get; set; }
         public string workShop{ get; set; } 
         public DateTime date { get; set; }
     }

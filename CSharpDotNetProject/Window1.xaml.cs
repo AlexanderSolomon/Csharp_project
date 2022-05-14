@@ -20,7 +20,7 @@ namespace CSharpDotNetProject
     public partial class Window1 : Window
     {
 
-        string connectionstring = "server=localhost;database=Kloningsattest;uid=root;password=gamechen0045";
+        string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=Oliven13";
 
         public Window1()
         {

@@ -16,8 +16,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using Syncfusion.Pdf;
-using Syncfusion.Pdf.Graphics;
 using System.ComponentModel;
 using System.Drawing;
 using Syncfusion.Pdf.Grid;
@@ -29,30 +27,32 @@ namespace CSharpDotNetProject
     /// Interaction logic for Window2.xaml
     /// </summary>
     /// Just to test the interaction with the PDF file.
-    public partial class Window2 : Window
+    public partial class FillPdf : Window
     {
         private const string Value = "Kloningsattest-02-2022-TEST.pdf";
 
-        public Window2()
+        public FillPdf()
         {
 
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_1(object sender, RoutedEventArgs e)
         {
+            int t = 0; 
             string fileName = new string(Value);
             PdfDocument doc = new PdfDocument();
             doc.LoadFromFile(fileName);
             PdfFormWidget formWidget = doc.Form as PdfFormWidget;
             for (int i = 0; i < formWidget.FieldsWidget.List.Count; i++)
             {
-                PdfField field = formWidget.FieldsWidget.List[i] as PdfField; 
+                PdfField field = formWidget.FieldsWidget.List[i] as PdfField;
 
                 if (field is PdfTextBoxFieldWidget)
                 {
                     PdfTextBoxFieldWidget pdfTextBoxField = field as PdfTextBoxFieldWidget;
-                    pdfTextBoxField.Text = "test"; 
+                    pdfTextBoxField.Text = t.ToString();
+                    t++; 
                 }
                 if (field is PdfCheckBoxWidgetFieldWidget)
                 {
