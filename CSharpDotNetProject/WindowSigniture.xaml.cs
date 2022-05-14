@@ -15,6 +15,8 @@ using System.Windows.Navigation;
 using Syncfusion.UI.Xaml.ImageEditor;
 using Syncfusion.UI.Xaml.ImageEditor.Enums;
 
+/// https://github.com/SyncfusionExamples/wpf-imageeditor-examples/tree/master/Samples/Signature
+
 namespace CSharpDotNetProject
 {
     /// <summary>
@@ -35,7 +37,7 @@ namespace CSharpDotNetProject
         private void SfImageEditor_Loaded(object sender, RoutedEventArgs e)
         {
             var imageEditor = sender as SfImageEditor;
-            imageEditor.AddShape(ShapeType.Path, new PenSettings() { Stroke = new SolidColorBrush(Colors.Red), PathStrokeWidth = 3 });
+            imageEditor?.AddShape(ShapeType.Path, new PenSettings() { Stroke = new SolidColorBrush(Colors.Red), PathStrokeWidth = 3 });
         }
 
         /// <summary>

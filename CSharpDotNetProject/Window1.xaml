@@ -114,6 +114,8 @@
 
             <Label>Billed af bil</Label>
             <TextBox>write here:</TextBox>
+        
+        
             <Button Content="Save" Name="save_button" Click="save_button_Click"/>
         </StackPanel>
     </ScrollViewer>
