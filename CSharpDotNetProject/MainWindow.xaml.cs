@@ -43,7 +43,9 @@ namespace CSharpDotNetProject
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            Window2 sW = new Window2();
+            sW.Show();
+            this.Close();
         }
     }
 }
