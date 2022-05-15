@@ -31,7 +31,10 @@ namespace CSharpDotNetProject
     {
 
         string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=Oliven13";
-        int[] yesNo = new int[11]; 
+        int[] yesNo = new int[11];
+        string strName1, imageName1;
+        string strName2, imageName2;
+
 
         public Window1()
         {
@@ -47,19 +50,29 @@ namespace CSharpDotNetProject
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
-            openFileDialog.Filter = "ImageFiles | *.jpg; *.jpeg; *.png";
-            Nullable<bool> result = openFileDialog.ShowDialog();
-
-            if (result == true)
+            try
             {
-                imgPhoto.Source = new BitmapImage(new Uri(openFileDialog.FileName));
 
+                OpenFileDialog openFileDialog = new OpenFileDialog();
+                openFileDialog.Multiselect = true;
+                openFileDialog.Filter = "ImageFiles | *.jpg; *.jpeg; *.png";
+                Nullable<bool> result = openFileDialog.ShowDialog();
+
+                if (result == true)
+                {
+                    imgPhoto.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+                    strName1 = openFileDialog.SafeFileName;
+                    imageName1 = openFileDialog.FileName;
+                    ImageSourceConverter isc = new ImageSourceConverter();
+
+                }
             }
-
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
+
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
             try
@@ -75,7 +88,7 @@ namespace CSharpDotNetProject
                     "`E_typegodkendt_under_nr`,`Dokumenteret_med_brochure`,`Dokumenteret_med_erklaering_proevningslaboratorium`,`Dokumenteret_med_CoC_erklaering`," +
                     "`Billeder_af_dokumenter_vedhaeftet`,`KM_stand`,`Gearkassenummer_kontrolleret`,`Medbragt_servicehitorik_kontrolleret`,`Noegler_kontrolleret_statspaerre_og_aaben_og_laasefunktion`," +
                     "`Identitet_dokumenteret_Originalt_CoC_dokument_data_erklaering`,`Originalt_laktykkelse`,`Laktykkelse_maalt_til`,`Lak_konklusion`,`Motornummer_kontrolleret`,`Koeretoej_i_original_farve`," +
-                    "`Er_stelnummer_korrekt`,`Stelnummerets_tilstand`,`Beskadiget_manglende_stelnummer`) " +
+                    "`Er_stelnummer_korrekt`,`Stelnummerets_tilstand`,`Beskadiget_manglende_stelnummer`, 'billede1', 'billede2') " +
                 "VALUES('" + dato.Text + "','" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + dekra_bilsyn.Text + "'," +
                 "'" + rapport_udført_af.Text + "','" + fremstiller.Text + "','" + kontaktperson.Text + "','" + Registreringsattest.Text + "'," +
                 "'" + registreringsattest_original.Text + "','" + seneste_kendte_registreringsnummer.Text + "','" + E_typegodkendt.Text + "'," +
@@ -83,10 +96,12 @@ namespace CSharpDotNetProject
                 "'" + yesNo[3] + "','" + yesNo[4] + "','" + km_stand.Text + "'," +
                 "'" + yesNo[8] + "','" + yesNo[9] + "','" + yesNo[7] + "','" + yesNo[10] + "'," +
                 "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + yesNo[6] + "','" + yesNo[5] + "'," +
-                "'" + yesNo[0] + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
+                "'" + yesNo[0] + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + ", @byteArray1, @byteArray2')";
 
                 MySqlCommand cmd = new MySqlCommand(query, connection);
                 MySqlCommand cmd2 = new MySqlCommand(query2, connection);
+                cmd2.Parameters.AddWithValue("@byteArray1", getByteArray1());
+                cmd2.Parameters.AddWithValue("@byteArray2", getByteArray2());
                 int value = cmd.ExecuteNonQuery();
                 int value2 = cmd2.ExecuteNonQuery();
 
@@ -224,5 +239,21 @@ namespace CSharpDotNetProject
         {
             yesNo[10] = 1;
         }
+        private byte[] getByteArray1()
+        {
+            FileStream fs = new FileStream(imageName1, FileMode.Open, FileAccess.Read);
+            byte[] byteArray = new byte[fs.Length];
+            fs.Read(byteArray, 0, Convert.ToInt32(fs.Length));
+            return byteArray;
+        }
+        private byte[] getByteArray2()
+        {
+            FileStream fs = new FileStream(imageName2, FileMode.Open, FileAccess.Read);
+            byte[] byteArray = new byte[fs.Length];
+            fs.Read(byteArray, 0, Convert.ToInt32(fs.Length));
+            return byteArray;
+        }
+
+
     }
 }
