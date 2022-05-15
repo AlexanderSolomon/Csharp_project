@@ -17,7 +17,13 @@ using Syncfusion.UI.Xaml.ImageEditor;
 using Syncfusion.UI.Xaml.ImageEditor.Enums;
 
 
+using System.IO;
+using Microsoft.Win32;
+using System.Drawing;
+using System.Windows.Media.Imaging;
+
 namespace CSharpDotNetProject
+
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
@@ -44,8 +50,8 @@ namespace CSharpDotNetProject
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
             string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Mærke`,`Model`,`Version`,`Første_registrering`,`Antal_nøgler`,`Gearkassenummer`) " +
-                     "VALUES('" +registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
-                     "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')"; 
+                     "VALUES('" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
+                     "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')";
 
             string query2 = "INSERT INTO `attest_information` (`Dato`,`Registreringsnummer`,`Stelnummer`,`DEKRA_Bilsyn`,`Rapport_udført_af`," +
                 "`Fremstiller`,`Kontaktperson`,`Registreringsattest`,`Registreringsattest_original_kopi`,`Seneste_kendte_registreringsnummer`," +
@@ -61,9 +67,9 @@ namespace CSharpDotNetProject
             "'" + gearkassenummer_kontrolleret.Text + "','" + medbragt_servicehistorik.Text + "','" + nøgler_kontrolleret.Text + "','" + identitet_dokumenteret_med_originalt_data_erklæring.Text + "'," +
             "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + motornummer_kontrolleret.Text + "','" + køretøj_i_original_farve.Text + "'," +
             "'" + stelnummer_korrekt.Text + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
-            
-            MySqlCommand cmd = new MySqlCommand(query, connection); 
-            MySqlCommand cmd2 = new MySqlCommand(query2,connection); 
+
+            MySqlCommand cmd = new MySqlCommand(query, connection);
+            MySqlCommand cmd2 = new MySqlCommand(query2, connection);
             int value = cmd.ExecuteNonQuery();
             int value2 = cmd2.ExecuteNonQuery();
    
@@ -74,6 +80,11 @@ namespace CSharpDotNetProject
         }
 
         private void km_stand_previewtextinput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+        private void antal_nøgler_previewtextinput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }

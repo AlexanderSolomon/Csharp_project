@@ -20,11 +20,12 @@ namespace CSharpDotNetProject
     /// </summary>
     public partial class CertificateOverview : Window
     {
-        string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=gamechen0045";
+        string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=Oliven13";
         Certificate certificate = new Certificate();
         public CertificateOverview(string id)
         {
             InitializeComponent();
+
             initCert(id);
             insertText();
 

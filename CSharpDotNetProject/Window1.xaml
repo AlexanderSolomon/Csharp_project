@@ -9,6 +9,12 @@
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
     <StackPanel Width="750">
+    <StackPanel>
+            <Button Content="Browser" Click="Button_Click"/>
+            <TextBox Name="pictureName"/>
+            <Image Margin="12,12,16,71" Name="imgPhoto"
+              Stretch="Fill" Grid.Column="1" />
+            <Button Content="Accept" Click="Button_Click_save_picture"/>
             <Label>Dekra Bilsyn:</Label>
             <TextBox x:Name="dekra_bilsyn"/>
         
@@ -88,7 +94,7 @@
             <TextBox Name="motornummer_kontrolleret"/>
 
             <Label>Antal nøgler</Label>
-            <TextBox Name="antal_nøgler"/>
+            <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput"/>
 
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
             <TextBox Name="nøgler_kontrolleret"/>

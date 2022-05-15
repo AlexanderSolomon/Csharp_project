@@ -63,5 +63,19 @@ namespace CSharpDotNetProject
             pdf.Show();
             this.Close(); 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 sW = new Window1();
+            sW.Show();
+            this.Close();
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SaveImage sW = new SaveImage();
+            sW.Show();
+        }
     }
 }
