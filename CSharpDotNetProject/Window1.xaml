@@ -134,20 +134,10 @@
 
             <Label>Billed af bil</Label>
             <TextBox>write here:</TextBox>
-         <Button Content="Browser" Click="Button_Click"/>
-            <Image Margin="12,12,16,71" Name="imgPhoto"
-              Stretch="Fill" Grid.Column="1" Height="100" />
-            <TextBox>picture:</TextBox>
-            <Button Content="Browser2" Click="Button_Click2"/>
-            <Image Margin="12,12,16,71" Name="imgPhoto1"
-              Stretch="Fill" Grid.Column="1" Height="100" />
-
-            <Button Content="Save" Name="save_button" Click="save_button_Click"/>
-
-
+        
             
                 <Label>Signatur</Label>
-                <Button Height="100" Content="sign" Name="signiture" Click="OpenwindowSign"/>
+                <Button Height="50" Content="sign" Name="signiture" Click="OpenwindowSign"/>
                 <Label>Signatur2</Label>
                 <Button Content="sign" Name="signiture2" Click="OpenwindowSign"/>
 
