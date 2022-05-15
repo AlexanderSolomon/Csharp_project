@@ -25,6 +25,7 @@ namespace CSharpDotNetProject
         public CertificateOverview(string id)
         {
             InitializeComponent();
+
             initCert(id);
             id_received.Text = certificate.SerialNumber;
 
@@ -51,21 +52,21 @@ namespace CSharpDotNetProject
                     certificate.RegistrationcertificateOriginal = dt["Registreringsattest_original_kopi"].ToString();
                     certificate.LastRegistration = dt["Seneste_kendte_registreringsnummer"].ToString();
                     certificate.ETypeApproveNr = dt["E_typegodkendt_under_nr"].ToString();
-                    certificate.DocumentedByBrochure = dt["Dokumenteret_med_brochure"].ToString();
+                    ///certificate.DocumentedByBrochure = dt["Dokumenteret_med_brochure"].ToString();
                     ///certificate.DocumentedByLab = dt["Dokumenteret_med_erklæring_fra_et_prøvningslaboratorium"].ToString();
                     ///certificate.DocumentedByCocDoc = dt["Dokumenteret_med_Originalt_CoC_dokument_data_erklæring"].ToString();
                     ///certificate.PicturesAppended = dt["Billeder_af_dokumenter_vedhæftet"].ToString();
                     certificate.Mileage = (int)dt["KM_stand"];
-                    certificate.GearBoxVerified = dt["Gearkassenummer_kontrolleret"].ToString();
-                    certificate.ServiceHistoryVerified = dt["Medbragt_servicehitorik_kontrolleret"].ToString();
+                    ///certificate.GearBoxVerified = dt["Gearkassenummer_kontrolleret"].ToString();
+                    ///certificate.ServiceHistoryVerified = dt["Medbragt_servicehitorik_kontrolleret"].ToString();
                     ///certificate.KeyControlled = dt["Nøgler_kontrolleret_statspærre_og_åben_og_låsefunktion"].ToString();
                     ///certificate.IdentityVerified = dt["Identitet_dokumenteret_med_Originalt_CoC_dokument_data_erklæring"].ToString();
                     certificate.OriginalPaintThickness = dt["Originalt_laktykkelse"].ToString();
                     ///certificate.OriginalPaintThicknessMeasured = dt["Laktykkelse_målt_til"].ToString();
                     certificate.PaintConclusion = dt["Lak_konklusion"].ToString();
-                    certificate.EngineNumberVerified = dt["Motornummer_kontrolleret"].ToString();
+                    ///certificate.EngineNumberVerified = dt["Motornummer_kontrolleret"].ToString();
                     /// certificate.OriginalPaint = dt["Køretøj_i_original_farve"].ToString();
-                    certificate.SerialCorrect = dt["Er_stelnummer_korrekt"].ToString();
+                    ///certificate.SerialCorrect = dt["Er_stelnummer_korrekt"].ToString();
                     certificate.SerialCondition = dt["Stelnummerets_tilstand"].ToString();
                     certificate.SerialDamaged = dt["Beskadiget_manglende_stelnummer"].ToString();
                 }
