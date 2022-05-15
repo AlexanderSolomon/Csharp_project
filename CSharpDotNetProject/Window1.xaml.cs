@@ -65,14 +65,25 @@ namespace CSharpDotNetProject
                     imageName1 = openFileDialog.FileName;
                     ImageSourceConverter isc = new ImageSourceConverter();
 
-                }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
+
         }
 
+        private void Button_Click2(object sender, RoutedEventArgs e)
+        {
+
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Multiselect = true;
+            openFileDialog.Filter = "ImageFiles | *.jpg; *.jpeg; *.png";
+            Nullable<bool> result = openFileDialog.ShowDialog();
+
+            if (result == true)
+            {
+                imgPhoto1.Source = new BitmapImage(new Uri(openFileDialog.FileName));
+
+            }
+
+        }
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
             try
