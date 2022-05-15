@@ -72,5 +72,10 @@ namespace CSharpDotNetProject
             connection.Close();
 
         }
+
+        private void km_stand_previewtextinput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
     }
 }
