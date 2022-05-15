@@ -19,10 +19,10 @@
             <TextBox Name="dato"/>
         
             <Label>Registreringsnummer:</Label>
-            <TextBox Name="registreringsnummer"/>
+            <TextBox Name="registreringsnummer" MaxLength="7"/>
         
             <Label>Stelnummer:</Label>
-            <TextBox Name="stelnummer"/>
+            <TextBox Name="stelnummer" MaxLength="17"/>
         
             <Label>Mærke</Label>
             <TextBox Name="mærke"/>
@@ -88,7 +88,7 @@
             <TextBox Name="motornummer_kontrolleret"/>
 
             <Label>Antal nøgler</Label>
-            <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput"/>
+            <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput" MaxLength="2"/>
 
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
             <TextBox Name="nøgler_kontrolleret"/>
