@@ -42,6 +42,7 @@ namespace CSharpDotNetProject
             int t = 0; 
             string fileName = new string(Value);
             PdfDocument doc = new PdfDocument();
+            PdfPageBase page = doc.Pages.Add();
             doc.LoadFromFile(fileName);
             PdfFormWidget formWidget = doc.Form as PdfFormWidget;
             for (int i = 0; i < formWidget.FieldsWidget.List.Count; i++)
@@ -52,7 +53,7 @@ namespace CSharpDotNetProject
                 {
                     PdfTextBoxFieldWidget pdfTextBoxField = field as PdfTextBoxFieldWidget;
                     pdfTextBoxField.Text = t.ToString();
-                    t++; 
+                    t++;
                 }
                 if (field is PdfCheckBoxWidgetFieldWidget)
                 {

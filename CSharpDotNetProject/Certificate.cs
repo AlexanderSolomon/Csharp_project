@@ -41,6 +41,8 @@ namespace CSharpDotNetProject
         private string model;
         private string version;
         private DateOnly dateRegistered;
+        private int keys;
+        private string gearBoxNumber; 
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -204,6 +206,22 @@ namespace CSharpDotNetProject
         {
             get { return dateRegistered; }
             set { dateRegistered = value; }
+        }
+        
+        public string Version
+        {
+            get { return version; }
+            set { version = value; }
+        }
+        public int Keys
+        {
+            get { return keys; }
+            set { keys = value; }
+        }
+        public string GearBoxNumber
+        {
+            get { return gearBoxNumber; }
+            set { gearBoxNumber = value; }
         }
     }
 }

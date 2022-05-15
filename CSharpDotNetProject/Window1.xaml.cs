@@ -47,50 +47,7 @@ namespace CSharpDotNetProject
             sW.Show();
         }
 
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            try
-            {
-
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Multiselect = true;
-                openFileDialog.Filter = "ImageFiles | *.jpg; *.jpeg; *.png";
-                Nullable<bool> result = openFileDialog.ShowDialog();
-
-                if (result == true)
-                {
-                    imgPhoto.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-                    strName1 = openFileDialog.SafeFileName;
-                    imageName1 = openFileDialog.FileName;
-                    ImageSourceConverter isc = new ImageSourceConverter();
-
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-
-        private void Button_Click2(object sender, RoutedEventArgs e)
-        {
-
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Multiselect = true;
-            openFileDialog.Filter = "ImageFiles | *.jpg; *.jpeg; *.png";
-            Nullable<bool> result = openFileDialog.ShowDialog();
-
-            if (result == true)
-            {
-                imgPhoto1.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-                strName2 = openFileDialog.SafeFileName;
-                imageName2 = openFileDialog.FileName;
-                ImageSourceConverter isc = new ImageSourceConverter();
-            }
-
-        }
+       
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
             try
