@@ -10,7 +10,7 @@
     <ScrollViewer>
     <StackPanel Width="750">
             <Label>Dekra Bilsyn:</Label>
-            <TextBox Name="dekra_bilsyn"/>
+            <TextBox x:Name="dekra_bilsyn"/>
         
             <Label>Rapport udført af:</Label>
             <TextBox Name="rapport_udført_af" />
