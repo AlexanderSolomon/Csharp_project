@@ -88,7 +88,7 @@
             <TextBox Name="motornummer_kontrolleret"/>
 
             <Label>Antal nøgler</Label>
-            <TextBox Name="antal_nøgler"/>
+            <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput"/>
 
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
             <TextBox Name="nøgler_kontrolleret"/>
