@@ -26,6 +26,7 @@ namespace CSharpDotNetProject
     {
 
         string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=gamechen0045";
+        int[] yesNo = new int[11]; 
 
         public Window1()
         {
@@ -56,11 +57,11 @@ namespace CSharpDotNetProject
             "VALUES('" + dato.Text + "','" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + dekra_bilsyn.Text + "'," +
             "'" + rapport_udført_af.Text + "','" + fremstiller.Text + "','" + kontaktperson.Text + "','" + Registreringsattest.Text + "'," +
             "'" + registreringsattest_original.Text + "','" + seneste_kendte_registreringsnummer.Text + "','" + E_typegodkendt.Text + "'," +
-            "'" + identitet_dokumenteret_med_brochure.Text + "','" + identitet_dokumenteret_med_erklæring_fra_et_prøvelaboratorium.Text + "'," +
-            "'" + identitet_dokumenteret_med_originalt_data_erklæring.Text + "','" + billeder_af_dokumenter_vedhæftet.Text + "','" + km_stand.Text + "'," +
-            "'" + gearkassenummer_kontrolleret.Text + "','" + medbragt_servicehistorik.Text + "','" + nøgler_kontrolleret.Text + "','" + identitet_dokumenteret_med_originalt_data_erklæring.Text + "'," +
-            "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + motornummer_kontrolleret.Text + "','" + køretøj_i_original_farve.Text + "'," +
-            "'" + stelnummer_korrekt.Text + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
+            "'" + yesNo[1] + "','" + yesNo[2] + "'," +
+            "'" + yesNo[3] + "','" + yesNo[4] + "','" + km_stand.Text + "'," +
+            "'" + yesNo[8] + "','" + yesNo[9] + "','" + yesNo[7] + "','" + yesNo[10] + "'," +
+            "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + yesNo[6] + "','" + yesNo[5] + "'," +
+            "'" + yesNo[0] + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
             
             MySqlCommand cmd = new MySqlCommand(query, connection); 
             MySqlCommand cmd2 = new MySqlCommand(query2,connection); 
@@ -81,6 +82,120 @@ namespace CSharpDotNetProject
         private void antal_nøgler_previewtextinput(object sender, TextCompositionEventArgs e)
         {
             e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+
+
+
+
+        private void Stelnummer_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[0] = 0;
+        }
+
+        private void StelnummerFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[0] = 1;
+        }
+
+        private void Brochure_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[1] = 0;
+        }
+
+        private void BrochureFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[1] = 1;
+        }
+
+        private void Proevelab_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[2] = 0;
+        }
+
+        private void ProevelabFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[2] = 1;
+        }
+
+        private void Cocdok_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[3] = 0;
+        }
+
+        private void CocdokFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[3] = 1;
+        }
+
+        private void Billed_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[4] = 0;
+        }
+
+        private void BilledFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[4] = 1;
+        }
+
+        private void Farve_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[5] = 0;
+        }
+
+        private void FarveFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[5] = 1;
+        }
+
+        private void Motorkontrolleret_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[6] = 0;
+        }
+
+        private void MotorkontrolleretFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[6] = 1;
+        }
+
+        private void Noeglekontrol_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[7] = 0;
+        }
+
+        private void NoeglekontrolFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[7] = 1;
+        }
+
+        private void Gearkassenummer_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[8] = 0;
+        }
+
+        private void GearkassenummerFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[8] = 1;
+        }
+
+        private void medbragt_servicehistorik_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[9] = 0;
+        }
+
+        private void medbragt_servicehistorikFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[9] = 1;
+        }
+
+        private void Coc_dokument_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[10] = 0;
+        }
+
+        private void Coc_dokumentFalse_Checked(object sender, RoutedEventArgs e)
+        {
+            yesNo[10] = 1;
         }
     }
 }

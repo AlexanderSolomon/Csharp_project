@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpDotNetProject"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="1966" Width="800">
     <ScrollViewer>
     <StackPanel Width="750">
             <Label>Dekra Bilsyn:</Label>
@@ -45,8 +45,10 @@
             <Label>Kontaktperson</Label>
             <TextBox Name="kontaktperson"/>
 
-            <Label>Er stelnummer korrekt?: ja eller nej</Label>
-            <TextBox Name="stelnummer_korrekt"/> 
+            <Label>Er stelnummer korrekt?:</Label>
+            <RadioButton Name="Stelnummer" GroupName="Stelnummer" Checked="Stelnummer_Checked">Ja</RadioButton>
+            <RadioButton Name="StelnummerFalse" GroupName="Stelnummer" Checked="StelnummerFalse_Checked">Nej</RadioButton>
+            
 
             <Label >Stelnummer tilstand</Label>
             <TextBox Name="stelnummer_tilstand"/>
@@ -66,33 +68,43 @@
             <Label>E-typegodkendt under nr.</Label>
             <TextBox Name="E_typegodkendt"/>
 
-            <Label>Identitet Dokumenteret med brochure: ja eller nej</Label>
-            <TextBox Name="identitet_dokumenteret_med_brochure"/>
+            <Label>Identitet Dokumenteret med brochure:</Label>
+            <RadioButton Name="Brochure" GroupName="Brochure" Checked="Brochure_Checked">Ja</RadioButton>
+            <RadioButton Name="BrochureFalse" GroupName="Brochure" Checked="BrochureFalse_Checked">Nej</RadioButton>
 
-            <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium: ja eller nej</Label>
-            <TextBox Name="identitet_dokumenteret_med_erklæring_fra_et_prøvelaboratorium"/>
+            <Label>Identitet dokumenteret med erklæring fra et prøvelaboratorium:</Label>
+            <RadioButton Name="Proevelab" GroupName="Proevelab" Checked="Proevelab_Checked">Ja</RadioButton>
+            <RadioButton Name="ProevelabFalse" GroupName="Proevelab" Checked="ProevelabFalse_Checked">Nej</RadioButton>
 
-            <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring: ja eller nej</Label>
-            <TextBox Name="identitet_dokumenteret_med_originalt_data_erklæring"/>
+            <Label>Identitet dokumenteret med originalt CoC dokument/data-erklæring:</Label>
+            <RadioButton Name="Cocdok" GroupName="Cocdok" Checked="Cocdok_Checked">Ja</RadioButton>
+            <RadioButton Name="CocdokFalse" GroupName="Cocdok" Checked="CocdokFalse_Checked">Nej</RadioButton>
 
-            <Label>Billeder af dokumenter vedhæftet: ja eller nej </Label>
-            <TextBox Name="billeder_af_dokumenter_vedhæftet"/>
+            <Label>Billeder af dokumenter vedhæftet: </Label>
+            <RadioButton Name="Billed" GroupName="Billed" Checked="Billed_Checked">Ja</RadioButton>
+            <RadioButton Name="BilledFalse" GroupName="Billed" Checked="BilledFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Køretøj i original farve</Label>
-            <TextBox Name="køretøj_i_original_farve"/>
+            <RadioButton Name="Farve" GroupName="Farve" Checked="Farve_Checked">Ja</RadioButton>
+            <RadioButton Name="FarveFalse" GroupName="Farve" Checked="FarveFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Lak konklusion</Label>
             <TextBox Name="lak_konklusion"/>
 
             <Label>Motornummer kontrolleret</Label>
-            <TextBox Name="motornummer_kontrolleret"/>
+            <RadioButton Name="Motorkontrolleret" GroupName="Motornummer" Checked="Motorkontrolleret_Checked">Ja</RadioButton>
+            <RadioButton Name="MotorkontrolleretFalse" GroupName="Motornummer" Checked="MotorkontrolleretFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Antal nøgler</Label>
             <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput" MaxLength="2"/>
 
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
-            <TextBox Name="nøgler_kontrolleret"/>
-
+            <RadioButton Name="Noeglekontrol" GroupName="Noeglekontrol" Checked="Noeglekontrol_Checked">Ja</RadioButton>
+            <RadioButton Name="NoeglekontrolFalse" GroupName="Noeglekontrol" Checked="NoeglekontrolFalse_Checked">Nej</RadioButton>
+           
 
             <Label>Original laktykkelse</Label>
             <TextBox Name="original_laktykkelse"/>
@@ -104,13 +116,19 @@
             <TextBox Name="gearkassenummer"/>
 
             <Label>Gearkassenummer kontrolleret</Label>
-            <TextBox Name="gearkassenummer_kontrolleret"/>
+            <RadioButton Name="Gearkassenummer" GroupName="Gearkasse" Checked="Gearkassenummer_Checked">Ja</RadioButton>
+            <RadioButton Name="GearkassenummerFalse" GroupName="Gearkasse" Checked="GearkassenummerFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Medbragt servicehistorik kontrolleret</Label>
-            <TextBox Name="medbragt_servicehistorik"/>
+            <RadioButton Name="medbragt_servicehistorik" GroupName="Servicehistorik" Checked="medbragt_servicehistorik_Checked">Ja</RadioButton>
+            <RadioButton Name="medbragt_servicehistorikFalse" GroupName="Servicehistorik" Checked="medbragt_servicehistorikFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Identitet dokumenteret med Originalt CoC_dokument data erklæring</Label>
-            <TextBox Name="identitet_dokumenteret_med_coc_dokument"/>
+            <RadioButton Name="Coc_dokument" GroupName="Data" Checked="Coc_dokument_Checked">Ja</RadioButton>
+            <RadioButton Name="Coc_dokumentFalse" GroupName="Data" Checked="Coc_dokumentFalse_Checked">Nej</RadioButton>
+            
 
             <Label>Billed af bil</Label>
             <TextBox>write here:</TextBox>
