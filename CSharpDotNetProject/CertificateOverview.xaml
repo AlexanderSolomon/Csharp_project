@@ -107,19 +107,17 @@
             <TextBlock HorizontalAlignment="Left" Margin="34,524,0,0" TextWrapping="Wrap" Text="Køretøj i original farve: " VerticalAlignment="Top"/>
             <TextBlock x:Name="koertøj_original_farve" HorizontalAlignment="Left" Margin="160,525,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
-            <!-- mangler -->
-
 
             <TextBlock HorizontalAlignment="Left" Margin="34,545,0,0" TextWrapping="Wrap" Text="Er stelnummer korrekt: " VerticalAlignment="Top"/>
             <TextBlock x:Name="stelnummer_korrekt" HorizontalAlignment="Left" Margin="160,546,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
 
             <TextBlock HorizontalAlignment="Left" Margin="34,566,0,0" TextWrapping="Wrap" Text="Stelnummerets tilstand: " VerticalAlignment="Top"/>
-            <TextBlock x:Name="stelnummerets_tilstand" HorizontalAlignment="Left" Margin="260,567,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <TextBlock x:Name="stelnummerets_tilstand" HorizontalAlignment="Left" Margin="162,567,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
 
             <TextBlock HorizontalAlignment="Left" Margin="34,587,0,0" TextWrapping="Wrap" Text="Beskadiget_manglende_stelnummer: " VerticalAlignment="Top"/>
-            <TextBlock x:Name="beskadgiet_stelnummer" HorizontalAlignment="Left" Margin="260,588,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+            <TextBlock x:Name="beskadgiet_stelnummer" HorizontalAlignment="Left" Margin="231,588,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
 
 
 

@@ -86,7 +86,7 @@
 
             <!--højre side-->
             <Border Grid.Row="1" Grid.Column="1" CornerRadius="0 0 5 0" Background="#4880ff">
-                <Button Style="{DynamicResource RoundButton}" Content="Klonnings Attester" Height="50" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="10,44,156,651"/>
+                <Button Style="{DynamicResource RoundButton}" Content="Klonnings Attester" Height="50" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="10,44,156,651" Click="Button_Click_2"/>
 
             </Border>
 

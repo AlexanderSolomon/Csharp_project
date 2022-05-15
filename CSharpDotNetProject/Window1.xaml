@@ -8,13 +8,12 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <ScrollViewer>
-    <StackPanel Width="750">
     <StackPanel>
-            <Button Content="Browser" Click="Button_Click"/>
+            <Button Content="Browser"/>
             <TextBox Name="pictureName"/>
             <Image Margin="12,12,16,71" Name="imgPhoto"
               Stretch="Fill" Grid.Column="1" />
-            <Button Content="Accept" Click="Button_Click_save_picture"/>
+            <Button Content="Accept"/>
             <Label>Dekra Bilsyn:</Label>
             <TextBox x:Name="dekra_bilsyn"/>
         
