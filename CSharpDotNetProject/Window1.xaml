@@ -12,7 +12,6 @@
             <TextBox Name="pictureName"/>
             <Image Margin="12,12,16,71" Name="imgPhoto"
               Stretch="Fill" Grid.Column="1" />
-            <Button Content="Accept" Click="Button_Click_save_picture"/>
             <Label>Dekra Bilsyn:</Label>
             <TextBox x:Name="dekra_bilsyn"/>
         

@@ -67,14 +67,14 @@ namespace CSharpDotNetProject
             {
                 FileStream fs = new FileStream(imageName, FileMode.Open, FileAccess.Read);
                 byte[] byteArray = new byte[fs.Length];
-
                 fs.Read(byteArray, 0, Convert.ToInt32(fs.Length));
+                MySqlConnection connection = new MySqlConnection(connectionstring);
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO billede (image) VALUES(@byteArray)", connection);
+                cmd.Parameters.AddWithValue("@byteArray", byteArray);
 
                 fs.Close();
                 try
                 {
-                    MySqlConnection connection = new MySqlConnection(connectionstring);
-                    MySqlCommand cmd = new MySqlCommand("INSERT INTO 'billede' VALUES(" + byteArray + ")", connection);
                     connection.Open();
                     cmd.ExecuteNonQuery();
                     MessageBox.Show("saved image sucessfully");

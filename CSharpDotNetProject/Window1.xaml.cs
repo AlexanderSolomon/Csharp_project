@@ -23,7 +23,6 @@ using System.Drawing;
 using System.Windows.Media.Imaging;
 
 namespace CSharpDotNetProject
-
 {
     /// <summary>
     /// Interaction logic for Window1.xaml
@@ -37,13 +36,13 @@ namespace CSharpDotNetProject
         {
             InitializeComponent();
         }
-      
+
         private void OpenwindowSign(object sender, RoutedEventArgs e)
         {
             WindowSigniture sW = new WindowSigniture();
             sW.Show();
         }
-       
+
 
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
@@ -72,7 +71,7 @@ namespace CSharpDotNetProject
             MySqlCommand cmd2 = new MySqlCommand(query2, connection);
             int value = cmd.ExecuteNonQuery();
             int value2 = cmd2.ExecuteNonQuery();
-   
+
 
             MessageBox.Show("Saved");
             connection.Close();
