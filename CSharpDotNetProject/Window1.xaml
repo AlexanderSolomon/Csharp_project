@@ -8,7 +8,9 @@
         mc:Ignorable="d"
         Title="Window1" Height="1966" Width="800">
     <ScrollViewer>
-    <StackPanel Width="750">
+    <StackPanel>
+            <Image Margin="12,12,16,71" Name="imgPhoto"
+              Stretch="Fill" Grid.Column="1" />
             <Label>Dekra Bilsyn:</Label>
             <TextBox x:Name="dekra_bilsyn"/>
         

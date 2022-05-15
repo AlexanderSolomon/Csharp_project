@@ -86,7 +86,8 @@
 
             <!--højre side-->
             <Border Grid.Row="1" Grid.Column="1" CornerRadius="0 0 5 0" Background="#4880ff">
-                <Button Style="{DynamicResource RoundButton}" Content="Klonnings Attester" Height="50" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="30,48,136,647" Click="Openwindow2ListSearch"/>
+                <Button Style="{DynamicResource RoundButton}" Content="Klonnings Attester" Height="50" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="10,44,156,651" Click="Button_Click_2"/>
+
             </Border>
 
 
@@ -95,7 +96,9 @@
             <Border Grid.Row="1" Grid.Column="0">
                 <Button Style="{DynamicResource RoundButton}" Content="Ny Klonnings Attest" Height="50" Width="500" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="10,44,240,651" Click="Openwindow1"/>
             </Border>
-            <Button Content="FillPdf" HorizontalAlignment="Left" Margin="690,22,0,3" Click="Button_Click"/>
+            <Button Content="Skifter til window1" HorizontalAlignment="Left" Margin="276,175,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Content="Skifter til saveImage" HorizontalAlignment="Left" Margin="276,340,0,0" VerticalAlignment="Top" Click="Button_Click_1" Grid.Row="1"/>
+            <Button Content="FillPdf" HorizontalAlignment="Left" Margin="690,22,0,3" Click="Button_Click_2"/>
 
         </Grid>
     </Border>

@@ -36,7 +36,11 @@ namespace CSharpDotNetProject
         private string serialCondition;
         private string serialDamaged;
         private string picturesAppended;
-        private string identityVerified; 
+        private string identityVerified;
+        private string make;
+        private string model;
+        private string version;
+        private DateOnly dateRegistered;
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -184,6 +188,22 @@ namespace CSharpDotNetProject
         {
             get { return identityVerified; }
             set { identityVerified = value; }
+        }
+        public string Make
+        {
+            get { return make; }
+            set { make = value; }
+        }
+        public string Model
+        {
+            get { return model; }
+            set { model = value; }
+        }
+
+        public DateOnly DateRegistered
+        {
+            get { return dateRegistered; }
+            set { dateRegistered = value; }
         }
     }
 }

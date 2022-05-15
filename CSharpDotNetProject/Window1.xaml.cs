@@ -17,6 +17,11 @@ using Syncfusion.UI.Xaml.ImageEditor;
 using Syncfusion.UI.Xaml.ImageEditor.Enums;
 
 
+using System.IO;
+using Microsoft.Win32;
+using System.Drawing;
+using System.Windows.Media.Imaging;
+
 namespace CSharpDotNetProject
 {
     /// <summary>
@@ -32,27 +37,27 @@ namespace CSharpDotNetProject
         {
             InitializeComponent();
         }
-      
+
         private void OpenwindowSign(object sender, RoutedEventArgs e)
         {
             WindowSigniture sW = new WindowSigniture();
             sW.Show();
         }
-       
+
 
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
-            string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Mærke`,`Model`,`Version`,`Første_registrering`,`Antal_nøgler`,`Gearkassenummer`) " +
-                     "VALUES('" +registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
-                     "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')"; 
+            string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Maerke`,`Model`,`Version`,`Foerste_registrering`,`Antal_noegler`,`Gearkassenummer`) " +
+                     "VALUES('" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
+                     "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')";
 
-            string query2 = "INSERT INTO `attest_information` (`Dato`,`Registreringsnummer`,`Stelnummer`,`DEKRA_Bilsyn`,`Rapport_udført_af`," +
+            string query2 = "INSERT INTO `attest_information` (`Dato`,`Registreringsnummer`,`Stelnummer`,`DEKRA_Bilsyn`,`Rapport_udfoert_af`," +
                 "`Fremstiller`,`Kontaktperson`,`Registreringsattest`,`Registreringsattest_original_kopi`,`Seneste_kendte_registreringsnummer`," +
-                "`E_typegodkendt_under_nr`,`Dokumenteret_med_brochure`,`Dokumenteret_med_erklæring_fra_et_prøvningslaboratorium`,`Dokumenteret_med_Originalt_CoC_dokument_data_erklæring`," +
-                "`Billeder_af_dokumenter_vedhæftet`,`KM_stand`,`Gearkassenummer_kontrolleret`,`Medbragt_servicehitorik_kontrolleret`,`Nøgler_kontrolleret_statspærre_og_åben_og_låsefunktion`," +
-                "`Identitet_dokumenteret_med_Originalt_CoC_dokument_data_erklæring`,`Originalt_laktykkelse`,`Laktykkelse_målt_til`,`Lak_konklusion`,`Motornummer_kontrolleret`,`Køretøj_i_original_farve`," +
+                "`E_typegodkendt_under_nr`,`Dokumenteret_med_brochure`,`Dokumenteret_med_erklaering_fra_et_proevningslaboratorium`,`Dokumenteret_med_Originalt_CoC_dokument_data_erklaering`," +
+                "`Billeder_af_dokumenter_vedhaeftet`,`KM_stand`,`Gearkassenummer_kontrolleret`,`Medbragt_servicehitorik_kontrolleret`,`Noegler_kontrolleret_statspaerre_og_aaben_og_laasefunktion`," +
+                "`Identitet_dokumenteret_med_Originalt_CoC_dokument_data_erklaring`,`Originalt_laktykkelse`,`Laktykkelse_maalt_til`,`Lak_konklusion`,`Motornummer_kontrolleret`,`Koeretoej_i_original_farve`," +
                 "`Er_stelnummer_korrekt`,`Stelnummerets_tilstand`,`Beskadiget_manglende_stelnummer`) " +
             "VALUES('" + dato.Text + "','" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + dekra_bilsyn.Text + "'," +
             "'" + rapport_udført_af.Text + "','" + fremstiller.Text + "','" + kontaktperson.Text + "','" + Registreringsattest.Text + "'," +
@@ -67,7 +72,7 @@ namespace CSharpDotNetProject
             MySqlCommand cmd2 = new MySqlCommand(query2,connection); 
             int value = cmd.ExecuteNonQuery();
             int value2 = cmd2.ExecuteNonQuery();
-   
+
 
             MessageBox.Show("Saved");
             connection.Close();
