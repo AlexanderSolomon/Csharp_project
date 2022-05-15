@@ -48,7 +48,7 @@ namespace CSharpDotNetProject
         {
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
-            string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Mærke`,`Model`,`Version`,`Første_registrering`,`Antal_nøgler`,`Gearkassenummer`) " +
+            string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Maerke`,`Model`,`Version`,`Foerste_registrering`,`Antal_noegler`,`Gearkassenummer`) " +
                      "VALUES('" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
                      "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')";
 
