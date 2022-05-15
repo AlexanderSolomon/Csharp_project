@@ -98,7 +98,7 @@
             </Border>
             <Button Content="Skifter til window1" HorizontalAlignment="Left" Margin="276,175,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
             <Button Content="Skifter til saveImage" HorizontalAlignment="Left" Margin="276,340,0,0" VerticalAlignment="Top" Click="Button_Click_1" Grid.Row="1"/>
-            <Button Content="FillPdf" HorizontalAlignment="Left" Margin="690,22,0,3" Click="Button_Click"/>
+            <Button Content="FillPdf" HorizontalAlignment="Left" Margin="690,22,0,3" Click="Button_Click_2"/>
 
         </Grid>
     </Border>

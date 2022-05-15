@@ -57,7 +57,7 @@ namespace CSharpDotNetProject
             }
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             FillPdf pdf = new FillPdf();
             pdf.Show();
