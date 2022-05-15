@@ -30,7 +30,7 @@ namespace CSharpDotNetProject
     public partial class Window1 : Window
     {
 
-        string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=gamechen0045";
+        string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=Oliven13";
         int[] yesNo = new int[11]; 
 
         public Window1()
@@ -47,35 +47,42 @@ namespace CSharpDotNetProject
 
         private void save_button_Click(object sender, RoutedEventArgs e)
         {
-            MySqlConnection connection = new MySqlConnection(connectionstring);
-            connection.Open();
-            string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Maerke`,`Model`,`Version`,`Foerste_registrering`,`Antal_noegler`,`Gearkassenummer`) " +
-                     "VALUES('" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
-                     "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')";
+            try
+            {
+                MySqlConnection connection = new MySqlConnection(connectionstring);
+                connection.Open();
+                string query = "INSERT INTO `bil_information` (`Registreringsnummer`,`Stelnummer`,`Maerke`,`Model`,`Version`,`Foerste_registrering`,`Antal_noegler`,`Gearkassenummer`) " +
+                         "VALUES('" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + mærke.Text + "','" + model.Text + "'," +
+                         "'" + version.Text + "','" + første_registrering.Text + "','" + antal_nøgler.Text + "','" + gearkassenummer.Text + "')";
 
-            string query2 = "INSERT INTO `attest_information` (`Dato`,`Registreringsnummer`,`Stelnummer`,`DEKRA_Bilsyn`,`Rapport_udfoert_af`," +
-                "`Fremstiller`,`Kontaktperson`,`Registreringsattest`,`Registreringsattest_original_kopi`,`Seneste_kendte_registreringsnummer`," +
-                "`E_typegodkendt_under_nr`,`Dokumenteret_med_brochure`,`Dokumenteret_med_erklaering_fra_et_proevningslaboratorium`,`Dokumenteret_med_Originalt_CoC_dokument_data_erklaering`," +
-                "`Billeder_af_dokumenter_vedhaeftet`,`KM_stand`,`Gearkassenummer_kontrolleret`,`Medbragt_servicehitorik_kontrolleret`,`Noegler_kontrolleret_statspaerre_og_aaben_og_laasefunktion`," +
-                "`Identitet_dokumenteret_med_Originalt_CoC_dokument_data_erklaring`,`Originalt_laktykkelse`,`Laktykkelse_maalt_til`,`Lak_konklusion`,`Motornummer_kontrolleret`,`Koeretoej_i_original_farve`," +
-                "`Er_stelnummer_korrekt`,`Stelnummerets_tilstand`,`Beskadiget_manglende_stelnummer`) " +
-            "VALUES('" + dato.Text + "','" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + dekra_bilsyn.Text + "'," +
-            "'" + rapport_udført_af.Text + "','" + fremstiller.Text + "','" + kontaktperson.Text + "','" + Registreringsattest.Text + "'," +
-            "'" + registreringsattest_original.Text + "','" + seneste_kendte_registreringsnummer.Text + "','" + E_typegodkendt.Text + "'," +
-            "'" + yesNo[1] + "','" + yesNo[2] + "'," +
-            "'" + yesNo[3] + "','" + yesNo[4] + "','" + km_stand.Text + "'," +
-            "'" + yesNo[8] + "','" + yesNo[9] + "','" + yesNo[7] + "','" + yesNo[10] + "'," +
-            "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + yesNo[6] + "','" + yesNo[5] + "'," +
-            "'" + yesNo[0] + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
-            
-            MySqlCommand cmd = new MySqlCommand(query, connection); 
-            MySqlCommand cmd2 = new MySqlCommand(query2,connection); 
-            int value = cmd.ExecuteNonQuery();
-            int value2 = cmd2.ExecuteNonQuery();
+                string query2 = "INSERT INTO `attest_information` (`Dato`,`Registreringsnummer`,`Stelnummer`,`DEKRA_Bilsyn`,`Rapport_udfoert_af`," +
+                    "`Fremstiller`,`Kontaktperson`,`Registreringsattest`,`Registreringsattest_original_kopi`,`Seneste_kendte_registreringsnummer`," +
+                    "`E_typegodkendt_under_nr`,`Dokumenteret_med_brochure`,`Dokumenteret_med_erklaering_proevningslaboratorium`,`Dokumenteret_med_CoC_erklaering`," +
+                    "`Billeder_af_dokumenter_vedhaeftet`,`KM_stand`,`Gearkassenummer_kontrolleret`,`Medbragt_servicehitorik_kontrolleret`,`Noegler_kontrolleret_statspaerre_og_aaben_og_laasefunktion`," +
+                    "`Identitet_dokumenteret_Originalt_CoC_dokument_data_erklaering`,`Originalt_laktykkelse`,`Laktykkelse_maalt_til`,`Lak_konklusion`,`Motornummer_kontrolleret`,`Koeretoej_i_original_farve`," +
+                    "`Er_stelnummer_korrekt`,`Stelnummerets_tilstand`,`Beskadiget_manglende_stelnummer`) " +
+                "VALUES('" + dato.Text + "','" + registreringsnummer.Text + "','" + stelnummer.Text + "','" + dekra_bilsyn.Text + "'," +
+                "'" + rapport_udført_af.Text + "','" + fremstiller.Text + "','" + kontaktperson.Text + "','" + Registreringsattest.Text + "'," +
+                "'" + registreringsattest_original.Text + "','" + seneste_kendte_registreringsnummer.Text + "','" + E_typegodkendt.Text + "'," +
+                "'" + yesNo[1] + "','" + yesNo[2] + "'," +
+                "'" + yesNo[3] + "','" + yesNo[4] + "','" + km_stand.Text + "'," +
+                "'" + yesNo[8] + "','" + yesNo[9] + "','" + yesNo[7] + "','" + yesNo[10] + "'," +
+                "'" + original_laktykkelse.Text + "','" + laktykkelse_målt_til.Text + "','" + lak_konklusion.Text + "','" + yesNo[6] + "','" + yesNo[5] + "'," +
+                "'" + yesNo[0] + "','" + stelnummer_tilstand.Text + "','" + beskadigt_stelnummer.Text + "')";
+
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+                MySqlCommand cmd2 = new MySqlCommand(query2, connection);
+                int value = cmd.ExecuteNonQuery();
+                int value2 = cmd2.ExecuteNonQuery();
 
 
-            MessageBox.Show("Saved");
-            connection.Close();
+                MessageBox.Show("Saved");
+                connection.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
 
         }
 
