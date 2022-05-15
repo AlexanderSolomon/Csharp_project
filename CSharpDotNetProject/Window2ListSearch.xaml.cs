@@ -68,7 +68,6 @@ namespace CSharpDotNetProject
                 int index = certificateDGrid.SelectedIndex; 
                 string setInfo = (index + 1).ToString();
                 CertificateOverview sW = new CertificateOverview(setInfo);
-                sW.id_received.Text = setInfo;
                 sW.Show();
                 this.Close();
             }

@@ -9,30 +9,34 @@ namespace CSharpDotNetProject
     internal class Certificate
     {
         private int id;
+        private string date; 
         private string registration; 
         private string serialNumber;
         private string workshop;
+        private string worker; 
         private string customer; 
         private string contact;
         private string registrationcertificate;
         private string registrationcertificateOriginal;
         private string lastRegistration;
         private string eTypeApproveNr;
-        private Boolean documentedByBrochure;
-        private Boolean documentedByLab; 
-        private Boolean documentedByCocDoc;
+        private string documentedByBrochure;
+        private string documentedByLab; 
+        private string documentedByCocDoc;
         private int mileage;
-        private Boolean gearBoxVerified;
-        private Boolean serviceHistoryVerified;
-        private Boolean keyControlled;
+        private string gearBoxVerified;
+        private string serviceHistoryVerified;
+        private string keyControlled;
         private string originalPaintThickness; 
         private string originalPaintThicknessMeasured;
         private string paintConclusion;
-        private Boolean engineNumberVerified;
-        private Boolean originalPaint;
-        private Boolean serialCorrect;
+        private string engineNumberVerified;
+        private string originalPaint;
+        private string serialCorrect;
         private string serialCondition;
-        private string serialDamaged; 
+        private string serialDamaged;
+        private string picturesAppended;
+        private string identityVerified; 
 
         public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
 
@@ -51,10 +55,15 @@ namespace CSharpDotNetProject
             get { return serialNumber; }
             set { serialNumber = value; }
         }
-        public String Workshop
+        public string Workshop
         {
             get { return workshop; }
             set { workshop = value; }
+        }
+        public string Worker
+        {
+            get { return worker; }
+            set { worker = value; }
         }
         public string Customer
         {
@@ -86,31 +95,32 @@ namespace CSharpDotNetProject
             get { return eTypeApproveNr; }
             set { eTypeApproveNr = value; }
         }
-        public Boolean GearBoxVerified
+        public string GearBoxVerified
         {
             get { return gearBoxVerified; }
+            set { gearBoxVerified = value; }
         }
-        public Boolean ServiceHistoryVerified
+        public string ServiceHistoryVerified
         {
             get { return serviceHistoryVerified; }
             set { serviceHistoryVerified = value; }
         }
-        public Boolean KeyControlled
+        public string KeyControlled
         {
             get { return keyControlled; }
             set { keyControlled = value; }
         }
-        public Boolean DocumentedByBrochure
+        public string DocumentedByBrochure
         {
             get { return documentedByBrochure; }
             set { documentedByBrochure = value;}
         }
-        public Boolean DocumentedByLab
+        public string DocumentedByLab
         {
             get { return documentedByLab; }
             set { documentedByLab = value; }
         }
-        public Boolean DocumentedByCocDoc
+        public string DocumentedByCocDoc
         {
             get { return documentedByCocDoc; }
             set { documentedByCocDoc = value; }
@@ -135,17 +145,17 @@ namespace CSharpDotNetProject
             get { return paintConclusion; }
             set { paintConclusion = value; }
         }
-        public Boolean EngineNumberVerified
+        public string EngineNumberVerified
         {
             get { return engineNumberVerified; }
             set { engineNumberVerified = value; }
         }
-        public Boolean OriginalPaint
+        public string OriginalPaint
         {
             get { return originalPaint; }
             set { originalPaint = value; }
         }
-        public Boolean SerialCorrect
+        public string SerialCorrect
         {
             get { return serialCorrect; }
             set { serialCorrect = value; }
@@ -159,6 +169,21 @@ namespace CSharpDotNetProject
         {
             get { return serialDamaged; }
             set { serialDamaged = value; }
+        }
+        public string Date
+        {
+            get { return date; }
+            set { date = value; }
+        }
+        public string PicturesAppended
+        {
+            get { return picturesAppended; }
+            set { picturesAppended = value;}
+        }
+        public string IdentityVerified
+        {
+            get { return identityVerified; }
+            set { identityVerified = value; }
         }
     }
 }

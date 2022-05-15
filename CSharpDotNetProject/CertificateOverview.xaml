@@ -7,6 +7,25 @@
         mc:Ignorable="d"
         Title="CertificateOverview" Height="450" Width="800">
     <Grid>
-        <TextBlock x:Name="id_received" HorizontalAlignment="Left" Margin="34,21,0,0" TextWrapping="Wrap" Text="NothingFound" VerticalAlignment="Top"/>
+        <TextBlock Text="ID:" HorizontalAlignment="Left" Margin="34,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,105,0,0" TextWrapping="Wrap" Text="Workshop: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,84,0,0" TextWrapping="Wrap" Text="Stelnummer: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,63,0,0" TextWrapping="Wrap" Text="Registreringsnummer: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,42,0,0" TextWrapping="Wrap" Text="Dato: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,126,0,0" TextWrapping="Wrap" Text="Fremstiller: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,189,0,0" TextWrapping="Wrap" Text="Registreringsattest orignal kopi: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,168,0,0" TextWrapping="Wrap" Text="Registreringsattest: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,147,0,0" TextWrapping="Wrap" Text="Kontaktperson: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="34,251,0,0" TextWrapping="Wrap" Text="Dokumenteret med brochure: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-gb" Text="E typegodkendt under nr: "/></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,0,0,0" TextWrapping="Wrap" Text="Senest kendte registreringsnummer: " VerticalAlignment="Center"/>
+
+
+
+        <TextBlock HorizontalAlignment="Left" Margin="53,21,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
     </Grid>
 </Window>
