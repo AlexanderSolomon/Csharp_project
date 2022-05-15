@@ -86,6 +86,9 @@ namespace CSharpDotNetProject
             {
                 MessageBox.Show(ex.Message);
             }
+            MainWindow sW = new MainWindow();
+            sW.Show();
+            this.Close();
 
         }
 

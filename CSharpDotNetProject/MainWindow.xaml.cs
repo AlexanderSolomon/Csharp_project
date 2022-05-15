@@ -57,12 +57,12 @@ namespace CSharpDotNetProject
             }
         }
 
-        private void Button_Click_2(object sender, RoutedEventArgs e)
+        /*private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             FillPdf pdf = new FillPdf();
             pdf.Show();
             this.Close(); 
-        }
+        }*/
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
@@ -72,11 +72,11 @@ namespace CSharpDotNetProject
 
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+       /* private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             SaveImage sW = new SaveImage();
             sW.Show();
-        }
+        }*/
 
         private void Button_Click_3(object sender, RoutedEventArgs e)
         {
