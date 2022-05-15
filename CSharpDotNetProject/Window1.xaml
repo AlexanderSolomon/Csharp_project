@@ -6,7 +6,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CSharpDotNetProject"
         mc:Ignorable="d"
-        Title="Window1" Height="1966" Width="800">
+        Title="Window1" Height="2213" Width="800">
     <ScrollViewer>
     <StackPanel>
            
@@ -134,10 +134,13 @@
 
             <Label>Billed af bil</Label>
             <TextBox>write here:</TextBox>
-            <Button Content="Browser" Click="Button_Click"/>
+         <Button Content="Browser" Click="Button_Click"/>
             <Image Margin="12,12,16,71" Name="imgPhoto"
               Stretch="Fill" Grid.Column="1" Height="100" />
-
+            <TextBox>picture:</TextBox>
+            <Button Content="Browser2" Click="Button_Click2"/>
+            <Image Margin="12,12,16,71" Name="imgPhoto1"
+              Stretch="Fill" Grid.Column="1" Height="100" />
 
             <Button Content="Save" Name="save_button" Click="save_button_Click"/>
 
