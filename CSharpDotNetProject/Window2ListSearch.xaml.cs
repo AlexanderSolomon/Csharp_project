@@ -23,7 +23,7 @@ namespace CSharpDotNetProject
     /// </summary>
     public partial class Window2ListSearch : Window
     {
-        string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=Oliven13";
+        string connectionstring = "server=localhost;database=Kloningsattest;uid=root;password=gamechen0045";
 
         List<CertificateElement> elements = new List<CertificateElement>();
         public Window2ListSearch()
@@ -35,20 +35,21 @@ namespace CSharpDotNetProject
             connection.Open();
             MySqlDataReader dt; 
             dt = cmd.ExecuteReader();
-            connection.Close();
             if (dt.HasRows)
             {
                 while (dt.Read())
                 {
-
+                    elements.Add(new CertificateElement((int)dt["Attest_ID"], dt["Registreringsnummer"].ToString(), dt["Dato"].ToString())); 
                 }
             }
             connection.Close();
+            certificateDGrid.ItemsSource = elements;
+
         }
         private void searchBox_KeyUp(object sender, System.Windows.Input.KeyboardEventArgs e)
         {
-            ///List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.serialNumber.StartsWith(searchBox.Text)));
-            ///certificateDGrid.ItemsSource = filtered;
+            List<CertificateElement> filtered = new List<CertificateElement>(elements.Where(certificate => certificate.registration.StartsWith(searchBox.Text)));
+            certificateDGrid.ItemsSource = filtered;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -57,12 +58,33 @@ namespace CSharpDotNetProject
             sW.Show();
             this.Close();
         }
+        private void Double_Click(object sender, RoutedEventArgs e)
+        {
+            var row = ItemsControl.ContainerFromElement((DataGrid)sender,
+                                        e.OriginalSource as DependencyObject) as DataGridRow;
+            if (row == null) return;
+            else
+            {
+                int index = certificateDGrid.SelectedIndex; 
+                string setInfo = (index + 1).ToString();
+                CertificateOverview sW = new CertificateOverview(setInfo);
+                sW.Show();
+                this.Close();
+            }
+        }
     }
     public class CertificateElement
     {
-        public int id{ get; set; }
-        public string workShop{ get; set; } 
-        public DateTime date { get; set; }
+        public int id { get; set; }
+        public string registration { get; set; }
+        public string date { get; set; }
+
+        public CertificateElement(int id, string registration, string date)
+        {
+            this.id = id;
+            this.registration = registration;
+            this.date = date;
+        }
     }
     // create database connection to get current list. 
 }

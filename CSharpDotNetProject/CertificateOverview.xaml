@@ -1,0 +1,78 @@
+﻿<Window x:Class="CSharpDotNetProject.CertificateOverview"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CSharpDotNetProject"
+        mc:Ignorable="d"
+        Title="CertificateOverview" Height="450" Width="800">
+    <ScrollViewer>
+        <Grid>
+        <TextBlock Text="ID:" HorizontalAlignment="Left" Margin="34,21,0,0" TextWrapping="Wrap" VerticalAlignment="Top"/>
+            
+        <TextBlock HorizontalAlignment="Left" Margin="34,105,0,0" TextWrapping="Wrap" Text="Workshop: " VerticalAlignment="Top"/>
+            
+        <TextBlock HorizontalAlignment="Left" Margin="34,84,0,0" TextWrapping="Wrap" Text="Stelnummer: " VerticalAlignment="Top"/>
+           
+        <TextBlock HorizontalAlignment="Left" Margin="34,63,0,0" TextWrapping="Wrap" Text="Registreringsnummer: " VerticalAlignment="Top"/>
+            
+        <TextBlock HorizontalAlignment="Left" Margin="34,42,0,0" TextWrapping="Wrap" Text="Dato: " VerticalAlignment="Top"/>
+            
+        <TextBlock HorizontalAlignment="Left" Margin="34,126,0,0" TextWrapping="Wrap" Text="Fremstiller: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,189,0,0" TextWrapping="Wrap" Text="Registreringsattest orignal kopi: " VerticalAlignment="Top"/>
+            
+        <TextBlock HorizontalAlignment="Left" Margin="34,168,0,0" TextWrapping="Wrap" Text="Registreringsattest: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,210,0,0" TextWrapping="Wrap" Text="Rapport udført af: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,147,0,0" TextWrapping="Wrap" Text="Kontaktperson: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,251,0,0" TextWrapping="Wrap" Text="Dokumenteret med brochure: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,230,0,0" TextWrapping="Wrap" VerticalAlignment="Top"><Run Language="en-gb" Text="E typegodkendt under nr: "/></TextBlock>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,608,0,0" TextWrapping="Wrap" Text="Senest kendte registreringsnummer: " VerticalAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="53,21,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,272,0,0" TextWrapping="Wrap" Text="Dokumenteret med erklæring fra et prøvningslaboratorium: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,293,0,0" TextWrapping="Wrap" Text="Dokumenteret med Originalt CoC-dokument data erklæring: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,314,0,0" TextWrapping="Wrap" Text="Billeder_af_dokumenter_vedhæftet: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,335,0,0" TextWrapping="Wrap" Text="KM-stand: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,356,0,0" TextWrapping="Wrap" Text="Gearkassenummer kontrolleret: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,377,0,0" TextWrapping="Wrap" Text="Medbragt servicehitorik kontrolleret: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,398,0,0" TextWrapping="Wrap" Text="Nøgler kontrolleret statspærre og åben og låsefunktion: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,419,0,0" TextWrapping="Wrap" Text="Identitet dokumenteret med Originalt CoC dokument data erklæring: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,440,0,0" TextWrapping="Wrap" Text="Originalt laktykkelse: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,461,0,0" TextWrapping="Wrap" Text="Laktykkelse målt til: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,482,0,0" TextWrapping="Wrap" Text="Lak konklusion: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,503,0,0" TextWrapping="Wrap" Text="Motornummer_kontrolleret: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,524,0,0" TextWrapping="Wrap" Text="Køretøj i original farve: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,545,0,0" TextWrapping="Wrap" Text="Er stelnummer korrekt: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,566,0,0" TextWrapping="Wrap" Text="Stelnummerets tilstand: " VerticalAlignment="Top"/>
+
+        <TextBlock HorizontalAlignment="Left" Margin="34,587,0,0" TextWrapping="Wrap" Text="Beskadiget_manglende_stelnummer: " VerticalAlignment="Top"/>
+
+
+
+
+
+
+    </Grid>
+    </ScrollViewer>
+</Window>

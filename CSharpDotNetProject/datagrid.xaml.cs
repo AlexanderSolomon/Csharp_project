@@ -20,7 +20,6 @@ public partial class datagrid : Window
             dt.Load(cmd.ExecuteReader());
             connection.Close();
             dtGrid.DataContext = dt;
-
     }
 
     public void save_button_Click(object sender, RoutedEventArgs e)
