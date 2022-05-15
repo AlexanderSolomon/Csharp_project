@@ -27,6 +27,7 @@ namespace CSharpDotNetProject
             InitializeComponent();
 
             initCert(id);
+            insertText();
 
 
             void initCert(string id)
@@ -68,13 +69,17 @@ namespace CSharpDotNetProject
                     certificate.SerialCorrect = dt["Er_stelnummer_korrekt"].ToString();
                     certificate.SerialCondition = dt["Stelnummerets_tilstand"].ToString();
                     certificate.SerialDamaged = dt["Beskadiget_manglende_stelnummer"].ToString();
+                    
                 }
                 else
                 {
-
                 }
             }
+                void insertText()
+                {
+                    ID.Text = certificate.Id.ToString();
 
+                }
         }
     }
 }
