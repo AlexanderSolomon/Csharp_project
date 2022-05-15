@@ -141,7 +141,7 @@
 
             
                 <Label>Signatur</Label>
-                <Button Height="100" Content="sign" Name="signiture" Click="OpenwindowSign"/>
+                <Button Height="50" Content="sign" Name="signiture" Click="OpenwindowSign"/>
                 <Label>Signatur2</Label>
                 <Button Content="sign" Name="signiture2" Click="OpenwindowSign"/>
 
