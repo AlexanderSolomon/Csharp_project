@@ -29,7 +29,8 @@ namespace CSharpDotNetProject
             initCert(id);
             insertText();
 
-            void initCert(string id) 
+
+            void initCert(string id)
             {
                 MySqlConnection connection = new MySqlConnection(connectionstring);
                 MySqlCommand cmd = new MySqlCommand("select * FROM kloningsattest.attest_information where Attest_ID = " + id + ";", connection);
