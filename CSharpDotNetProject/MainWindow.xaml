@@ -97,6 +97,7 @@
                 <Button Style="{DynamicResource RoundButton}" Content="Ny Klonnings Attest" Height="50" Width="500" Background="DarkGray" FontSize="20" FontFamily="Ariel" RenderTransformOrigin="0.508,0.506" Margin="10,44,240,651" Click="Openwindow1"/>
             </Border>
             <Button Content="Skifter til window1" HorizontalAlignment="Left" Margin="276,175,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Button_Click"/>
+            <Button Content="Skifter til saveImage" HorizontalAlignment="Left" Margin="560,22,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
         </Grid>
     </Border>

@@ -64,5 +64,11 @@ namespace CSharpDotNetProject
             this.Close();
 
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            SaveImage sW = new SaveImage();
+            sW.Show();
+        }
     }
 }
