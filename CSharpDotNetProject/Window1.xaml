@@ -10,7 +10,7 @@
     <ScrollViewer>
     <StackPanel Width="750">
             <Label>Dekra Bilsyn:</Label>
-            <TextBox Name="dekra_bilsyn"/>
+            <TextBox x:Name="dekra_bilsyn"/>
         
             <Label>Rapport udført af:</Label>
             <TextBox Name="rapport_udført_af" />
@@ -34,7 +34,7 @@
             <TextBox Name="version"/>
         
             <Label>KM-Stand:</Label>
-            <TextBox Name="km_stand"/>
+            <TextBox Name="km_stand" PreviewTextInput="km_stand_previewtextinput"/>
         
             <Label>Første registrering:</Label>
             <TextBox Name="første_registrering"/>
@@ -88,7 +88,7 @@
             <TextBox Name="motornummer_kontrolleret"/>
 
             <Label>Antal nøgler</Label>
-            <TextBox Name="antal_nøgler"/>
+            <TextBox Name="antal_nøgler" PreviewTextInput="antal_nøgler_previewtextinput"/>
 
             <Label>Nøgler kontrolleret (startspærre og åben/låsefunktion)</Label>
             <TextBox Name="nøgler_kontrolleret"/>

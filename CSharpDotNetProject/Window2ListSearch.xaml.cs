@@ -23,7 +23,7 @@ namespace CSharpDotNetProject
     /// </summary>
     public partial class Window2ListSearch : Window
     {
-        string connectionstring = "server=localhost; port=3306;database=kloningsattest;uid=root;password=Oliven13";
+        string connectionstring = "server=localhost;database=Kloningsattest;uid=root;password=gamechen0045";
 
         List<CertificateElement> elements = new List<CertificateElement>();
         public Window2ListSearch()

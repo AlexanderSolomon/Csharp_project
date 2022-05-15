@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -24,7 +25,7 @@ namespace CSharpDotNetProject
     public partial class Window1 : Window
     {
 
-        string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=Oliven13";
+        string connectionstring = "server=localhost;port=3306;database=kloningsattest;uid=root;password=gamechen0045";
 
         public Window1()
         {
@@ -36,8 +37,9 @@ namespace CSharpDotNetProject
             WindowSigniture sW = new WindowSigniture();
             sW.Show();
         }
+       
 
-            private void save_button_Click(object sender, RoutedEventArgs e)
+        private void save_button_Click(object sender, RoutedEventArgs e)
         {
             MySqlConnection connection = new MySqlConnection(connectionstring);
             connection.Open();
@@ -69,6 +71,16 @@ namespace CSharpDotNetProject
             MessageBox.Show("Saved");
             connection.Close();
 
+        }
+
+        private void km_stand_previewtextinput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
+        }
+
+        private void antal_nøgler_previewtextinput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
     }
 }
